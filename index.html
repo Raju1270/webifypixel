@@ -1,0 +1,1329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Pinnacle Teleservices - Global Communication Partner for Enterprises. Automated Chat Integration and communication solutions including RCS, WhatsApp Business API, Voice, Email, and more."
+    />
+    <meta property="og:title" content="Pinnacle Teleservices - Enterprise Communication Solutions" />
+    <meta
+      property="og:description"
+      content="Global Communication Partner for Enterprises since 2003. End-to-end communication solutions for businesses."
+    />
+    <meta property="og:type" content="website" />
+    <title>Pinnacle Teleservices - Enterprise Communication Solutions</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#eff6ff",
+                100: "#dbeafe",
+                200: "#bfdbfe",
+                300: "#93c5fd",
+                400: "#60a5fa",
+                500: "#3b82f6",
+                600: "#2563eb",
+                700: "#1d4ed8",
+                800: "#1e40af",
+                900: "#1e3a8a",
+                950: "#172554",
+              },
+              accent: {
+                pink: "#ec4899",
+                purple: "#a855f7",
+                orange: "#f97316",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"],
+              display: ["Poppins", "system-ui", "sans-serif"],
+            },
+            fontSize: {
+              xs: ["0.75rem", { lineHeight: "1rem" }],
+              sm: ["0.875rem", { lineHeight: "1.25rem" }],
+              base: ["0.9375rem", { lineHeight: "1.625rem" }],
+              lg: ["1.0625rem", { lineHeight: "1.75rem" }],
+              xl: ["1.125rem", { lineHeight: "1.875rem" }],
+              "2xl": ["1.375rem", { lineHeight: "2rem" }],
+              "3xl": ["1.75rem", { lineHeight: "2.25rem" }],
+              "4xl": ["2rem", { lineHeight: "2.5rem" }],
+              "5xl": ["2.5rem", { lineHeight: "1.2" }],
+              "6xl": ["3rem", { lineHeight: "1.15" }],
+              "7xl": ["3.5rem", { lineHeight: "1.1" }],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-out",
+              "slide-up": "slideUp 0.8s ease-out",
+              "slide-down": "slideDown 0.6s ease-out",
+              "slide-left": "slideLeft 0.8s ease-out",
+              "slide-right": "slideRight 0.8s ease-out",
+              "scale-in": "scaleIn 0.5s ease-out",
+              float: "float 6s ease-in-out infinite",
+              "pulse-slow": "pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+              shimmer: "shimmer 2s linear infinite",
+              "bounce-slow": "bounce 3s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(40px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              slideDown: {
+                "0%": { transform: "translateY(-40px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              slideLeft: {
+                "0%": { transform: "translateX(40px)", opacity: "0" },
+                "100%": { transform: "translateX(0)", opacity: "1" },
+              },
+              slideRight: {
+                "0%": { transform: "translateX(-40px)", opacity: "0" },
+                "100%": { transform: "translateX(0)", opacity: "1" },
+              },
+              scaleIn: {
+                "0%": { transform: "scale(0.85)", opacity: "0" },
+                "100%": { transform: "scale(1)", opacity: "1" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-25px)" },
+              },
+              shimmer: {
+                "0%": { backgroundPosition: "-1000px 0" },
+                "100%": { backgroundPosition: "1000px 0" },
+              },
+            },
+            boxShadow: {
+              glow: "0 0 20px rgba(59, 130, 246, 0.5)",
+              "glow-lg": "0 0 30px rgba(59, 130, 246, 0.6)",
+              "inner-glow": "inset 0 0 20px rgba(59, 130, 246, 0.3)",
+            },
+            backdropBlur: {
+              xs: "2px",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      [x-cloak] { display: none !important; }
+      
+      * {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 0.9375rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      /* Shimmer Effect */
+      .shimmer {
+        background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+        background-size: 200% 100%;
+      }
+
+      /* Glass Effect */
+      .glass {
+        backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #3b82f6, #2563eb);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #2563eb, #1d4ed8);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 min-h-screen flex items-center overflow-hidden" id="hero">
+      <!-- Animated Background Orbs -->
+      <div class="absolute inset-0 overflow-hidden opacity-30">
+        <div
+          class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"
+        ></div>
+        <div
+          class="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"
+          style="animation-delay: 2s"
+        ></div>
+        <div
+          class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"
+          style="animation-delay: 4s"
+        ></div>
+      </div>
+
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen py-16 gap-12">
+          <div class="w-full lg:w-7/12 xl:w-6/12">
+            <div class="text-white space-y-6 animate-slide-up">
+              <p
+                class="inline-block text-xs md:text-xs font-bold px-3 py-1 bg-blue-500/20 backdrop-blur-sm rounded-full text-blue-300 border border-blue-400/30 uppercase animate-fade-in"
+                data-testid="text-hero-subtitle"
+              >
+                Global Communication Partner
+              </p>
+              <div
+                class="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 leading-[1.1] tracking-tight"
+                data-testid="text-hero-title"
+                style="animation-delay: 0.5s"
+              >
+                Automated Chat<br />
+                <span
+                  class="bg-gradient-to-r from-blue-200 via-cyan-300 to-blue-200 bg-clip-text text-transparent animate-shimmer delay-700 bg-[length:200%_100%]"
+                  >Integration</span
+                >
+                Solutions
+              </div>
+              <p
+                class="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl font-light"
+                data-testid="text-hero-description"
+                style="animation-delay: 0.4s"
+              >
+                Transform your business communication with our enterprise-grade solutions. Trusted partner for
+                <span class="text-blue-400 font-semibold">6000+</span> businesses since 2003.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 pt-2" style="animation-delay: 0.6s">
+                <a
+                  href="contact.html#demo"
+                  class="group inline-flex items-center justify-center px-7 py-3.5 text-sm bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-2xl shadow-blue-500/40 hover:shadow-blue-500/60 hover:-translate-y-1 hover:scale-105 relative overflow-hidden"
+                  data-testid="button-hero-demo"
+                >
+                  <span
+                    class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"
+                  ></span>
+                  <i class="bi bi-calendar-check mr-2 text-base group-hover:scale-105 transition-transform"></i>
+                  <span>Schedule a Demo</span>
+                </a>
+                <a
+                  href="contact.html"
+                  class="inline-flex items-center justify-center px-7 py-3.5 text-sm bg-white/10 backdrop-blur-md border-2 border-white/40 text-white font-bold rounded-xl hover:bg-white hover:text-blue-900 hover:border-white transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl"
+                  data-testid="button-hero-sales"
+                >
+                  <i class="bi bi-telephone mr-2 text-base"></i>
+                  <span>Talk to Sales</span>
+                </a>
+              </div>
+              <div
+                class="flex items-center gap-4 p-2 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 w-fit hover:bg-white/10 transition-all duration-300 group"
+                style="animation-delay: 0.8s"
+              >
+                <div
+                  class="w-64 h-fit bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform"
+                >
+                  <img src="newassests/home/whatsapp-meta.png" alt="Meta Premier Partner" class="w-64 h-fit" data-testid="img-meta-partner" />
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-white">Premier Partner</p>
+                  <p class="text-[10px] text-gray-400 font-medium">of Meta Platform</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Section -->
+          <div class="lg:w-5/12 xl:w-6/12 animate-slide-left">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl"></div>
+              <div class="relative overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-slate-800 to-slate-900">
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline poster="assets/images/video-poster.jpg">
+                  <source src="newassests/home/hero_section_video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Communication Solutions Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden" id="solutions">
+      <!-- Background Pattern -->
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
+      ></div>
+
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-5 tracking-wider uppercase border border-blue-200/60 shadow-sm"
+            ><i class="bi bi-grid-3x3-gap-fill text-sm"></i>Our Services</span
+          >
+          <p class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-3 leading-tight" data-testid="text-solutions-title">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-blue-800 to-gray-900">End-to-End</span> Communication
+          </p>
+          <p class="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Transform your business communication with our comprehensive suite of solutions
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- RCS -->
+          <div
+            class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-blue-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden"
+            data-testid="card-solution-rcs"
+          >
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-xl flex items-center justify-center mb-5 text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-blue-500/50 relative z-10"
+            >
+              <i class="bi bi-chat-dots"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">RCS</h3>
+            <p class="text-gray-600 mb-5 leading-relaxed text-sm relative z-10">
+              Level up the messaging game to create a dynamic customer experience with
+              <span class="font-semibold text-blue-600">80% more</span> engagement.
+            </p>
+            <a
+              href="business.html#rcs"
+              class="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-sm group-hover:gap-1 transition-all justify-center items-center"
+            >
+              Learn More <i class="bi bi-arrow-right ml-2 transition-transform"></i>
+            </a>
+          </div>
+          <!-- WhatsApp Business API -->
+          <div
+            class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-green-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden"
+            data-testid="card-solution-whatsapp"
+            style="animation-delay: 0.1s"
+          >
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-green-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-green-500 via-green-600 to-green-700 rounded-xl flex items-center justify-center mb-5 text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-green-500/50 relative z-10"
+            >
+              <i class="bi bi-whatsapp"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3 group-hover:text-green-600 transition-colors relative z-10">WhatsApp API</h3>
+            <p class="text-gray-600 mb-5 leading-relaxed text-sm relative z-10">
+              Reach <span class="font-semibold text-green-600">2B+ users</span> with fast, reliable, encrypted, and AI-enabled WhatsApp Business API.
+            </p>
+            <a
+              href="business.html#whatsapp"
+              class="inline-flex items-center text-green-600 hover:text-green-700 font-semibold text-sm group-hover:gap-1 transition-all justify-center items-center"
+            >
+              Learn More <i class="bi bi-arrow-right ml-2 transition-transform"></i>
+            </a>
+          </div>
+          <!-- Voice -->
+          <div
+            class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-purple-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden"
+            data-testid="card-solution-voice"
+            style="animation-delay: 0.2s"
+          >
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 rounded-xl flex items-center justify-center mb-5 text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-purple-500/50 relative z-10"
+            >
+              <i class="bi bi-telephone"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors relative z-10">Voice</h3>
+            <p class="text-gray-600 mb-5 leading-relaxed text-sm relative z-10">
+              Create a scalable voice experience with automated and bulk calling solutions for enterprises.
+            </p>
+            <a
+              href="business.html#voice"
+              class="inline-flex items-center text-purple-600 hover:text-purple-700 font-bold text-sm group-hover:gap-1.5 transition-all justify-center items-center relative z-10"
+            >
+              Learn More <i class="bi bi-arrow-right ml-2 transition-transform"></i>
+            </a>
+          </div>
+          <!-- Email -->
+          <div
+            class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-red-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden"
+            data-testid="card-solution-email"
+            style="animation-delay: 0.3s"
+          >
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-red-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-red-500 via-red-600 to-red-700 rounded-xl flex items-center justify-center mb-5 text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-red-500/50 relative z-10"
+            >
+              <i class="bi bi-envelope"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3 group-hover:text-red-600 transition-colors relative z-10">Email</h3>
+            <p class="text-gray-600 mb-5 leading-relaxed text-sm relative z-10">
+              Power up campaigns with cost-effective and <span class="font-semibold text-red-600">high ROI</span> email delivery solutions.
+            </p>
+            <a
+              href="business.html#email"
+              class="inline-flex items-center text-red-600 hover:text-red-700 font-bold text-sm group-hover:gap-1.5 transition-all justify-center items-center relative z-10"
+            >
+              Learn More <i class="bi bi-arrow-right ml-2 transition-transform"></i>
+            </a>
+          </div>
+          <!-- ChatBot -->
+          <div
+            class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-indigo-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden"
+            data-testid="card-solution-chatbot"
+            style="animation-delay: 0.4s"
+          >
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-indigo-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-indigo-500 via-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center mb-5 text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-indigo-500/50 relative z-10"
+            >
+              <i class="bi bi-robot"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors relative z-10">AI ChatBot</h3>
+            <p class="text-gray-600 mb-5 leading-relaxed text-sm relative z-10">
+              Automate customer interactions with personalized conversational AI to improve the journey.
+            </p>
+            <a
+              href="business.html#chatbot"
+              class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-bold text-sm group-hover:gap-1.5 transition-all justify-center items-center relative z-10"
+            >
+              Learn More <i class="bi bi-arrow-right ml-2 transition-transform"></i>
+            </a>
+          </div>
+          <!-- SMSC -->
+          <div
+            class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-cyan-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden"
+            data-testid="card-solution-smsc"
+            style="animation-delay: 0.5s"
+          >
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-cyan-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-cyan-500 via-cyan-600 to-cyan-700 rounded-xl flex items-center justify-center mb-5 text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-cyan-500/50 relative z-10"
+            >
+              <i class="bi bi-server"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3 group-hover:text-cyan-600 transition-colors relative z-10">SMSC</h3>
+            <p class="text-gray-600 mb-5 leading-relaxed text-sm relative z-10">
+              High-performance message delivery system ensuring stable and efficient communication.
+            </p>
+            <a
+              href="business.html#smsc"
+              class="inline-flex items-center text-cyan-600 hover:text-cyan-700 font-bold text-sm group-hover:gap-1.5 transition-all justify-center items-center relative z-10"
+            >
+              Learn More <i class="bi bi-arrow-right ml-2 transition-transform"></i>
+            </a>
+          </div>
+          <!-- Messaging -->
+          <div
+            class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-teal-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden"
+            data-testid="card-solution-messaging"
+            style="animation-delay: 0.6s"
+          >
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-teal-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 rounded-xl flex items-center justify-center mb-5 text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-teal-500/50 relative z-10"
+            >
+              <i class="bi bi-chat-square-text"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors relative z-10">Messaging</h3>
+            <p class="text-gray-600 mb-5 leading-relaxed text-sm relative z-10">
+              Secure, timely delivery of transactional, OTP, and promotional messages to consumers.
+            </p>
+            <a
+              href="business.html#messaging"
+              class="inline-flex items-center text-teal-600 hover:text-teal-700 font-bold text-sm group-hover:gap-1.5 transition-all justify-center items-center relative z-10"
+            >
+              Learn More <i class="bi bi-arrow-right ml-2 transition-transform"></i>
+            </a>
+          </div>
+          <!-- Integrations -->
+          <div
+            class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-orange-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden"
+            data-testid="card-solution-integrations"
+            style="animation-delay: 0.7s"
+          >
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div
+              class="w-14 h-14 bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 rounded-xl flex items-center justify-center mb-5 text-white text-2xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-orange-500/50 relative z-10"
+            >
+              <i class="bi bi-puzzle"></i>
+            </div>
+            <h3 class="text-lg font-extrabold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors relative z-10">Integrations</h3>
+            <p class="text-gray-600 mb-5 leading-relaxed text-sm relative z-10">
+              Seamlessly connect with Zoho, Shopify, WooCommerce, HubSpot, and many more platforms.
+            </p>
+            <a
+              href="business.html#integrations"
+              class="inline-flex items-center text-orange-600 hover:text-orange-700 font-bold text-sm group-hover:gap-1.5 transition-all justify-center items-center relative z-10"
+            >
+              Learn More <i class="bi bi-arrow-right ml-2 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 relative overflow-hidden" id="stats">
+      <!-- Decorative Elements -->
+      <div class="absolute inset-0 overflow-hidden opacity-20">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+        <div class="absolute top-1/2 right-0 w-96 h-96 bg-cyan-300 rounded-full filter blur-3xl"></div>
+        <div class="absolute -bottom-24 left-1/3 w-96 h-96 bg-blue-300 rounded-full filter blur-3xl"></div>
+      </div>
+
+      <!-- Grid Pattern Overlay -->
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff12_1px,transparent_1px),linear-gradient(to_bottom,#ffffff12_1px,transparent_1px)] bg-[size:32px_32px]"
+      ></div>
+
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="text-center mb-16 animate-slide-up">
+          <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-white/20 backdrop-blur-md text-white rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-white/30 shadow-lg">
+            <i class="bi bi-graph-up text-sm"></i>
+            Our Impact
+          </span>
+          <p class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 leading-tight" data-testid="text-stats-title">
+            Trusted by <span class="text-cyan-300">Industry Leaders</span>
+          </p>
+          <p class="text-base md:text-lg text-blue-100 leading-relaxed">Numbers that speak for our excellence</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div class="text-center group animate-scale-in h-full" data-testid="stat-years">
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/15 transition-all duration-300 border border-white/20 hover:border-white/40 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50"
+            >
+              <div class="text-5xl md:text-6xl font-black text-white mb-2 group-hover:scale-105 transition-transform" data-count="22">22</div>
+              <div class="text-lg font-bold text-blue-200 mb-1">Years</div>
+              <p class="text-xs text-blue-100">Industry Experience</p>
+            </div>
+          </div>
+          <div class="text-center group animate-scale-in h-full" data-testid="stat-clients" style="animation-delay: 0.1s">
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/15 transition-all duration-300 border border-white/20 hover:border-white/40 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50"
+            >
+              <div class="text-5xl md:text-6xl font-black text-white mb-2 group-hover:scale-105 transition-transform" data-count="6000">6K+</div>
+              <div class="text-lg font-bold text-blue-200 mb-1">Clients</div>
+              <p class="text-xs text-blue-100">Satisfied Customers</p>
+            </div>
+          </div>
+          <div class="text-center group animate-scale-in h-full" data-testid="stat-capacity" style="animation-delay: 0.2s">
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/15 transition-all duration-300 border border-white/20 hover:border-white/40 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50"
+            >
+              <div class="text-5xl md:text-6xl font-black text-white mb-2 group-hover:scale-105 transition-transform" data-count="75">75B+</div>
+              <div class="text-lg font-bold text-blue-200 mb-1">Messages</div>
+              <p class="text-xs text-blue-100">Annual Capacity</p>
+            </div>
+          </div>
+          <div class="text-center group animate-scale-in h-full" data-testid="stat-partners" style="animation-delay: 0.3s">
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/15 transition-all duration-300 border border-white/20 hover:border-white/40 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50"
+            >
+              <div class="text-5xl md:text-6xl font-black text-white mb-2 group-hover:scale-105 transition-transform" data-count="100">100+</div>
+              <div class="text-lg font-bold text-blue-200 mb-1">Partners</div>
+              <p class="text-xs text-blue-100">Channel Network</p>
+            </div>
+          </div>
+          <div class="text-center group animate-scale-in h-full" data-testid="stat-uptime" style="animation-delay: 0.4s">
+            <div
+              class="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/15 transition-all duration-300 border border-white/20 hover:border-white/40 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/50"
+            >
+              <div class="text-5xl md:text-6xl font-black text-white mb-2 group-hover:scale-105 transition-transform">99.99%</div>
+              <div class="text-lg font-bold text-blue-200 mb-1">Uptime</div>
+              <p class="text-xs text-blue-100">API Reliability</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Verified Communications Section -->
+    <section class="py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50" id="verified">
+      <div class="container mx-auto px-4 lg:px-8 max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2 space-y-7 animate-slide-right">
+            <span
+              class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 rounded-full text-xs font-semibold tracking-wider uppercase border border-emerald-200/60 shadow-sm"
+              ><i class="bi bi-shield-check-fill text-sm"></i>Security First</span
+            >
+            <p class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight" data-testid="text-verified-title">
+              Safeguard Your Customers
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-600">From Spam</span>
+            </p>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+              Build trust with your customers through verified sender IDs and authenticated messaging. Our platform ensures your communications are
+              secure, compliant, and reach the intended recipients.
+            </p>
+            <ul class="space-y-3.5">
+              <li class="flex items-center text-gray-700 group">
+                <div
+                  class="w-14 h-14 bg-gradient-to-br from-green-500 via-green-600 to-green-700 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform shadow-lg shadow-green-500/30"
+                >
+                  <i class="bi bi-check-lg text-white text-2xl font-bold"></i>
+                </div>
+                <span class="text-base font-bold">Verified Sender IDs</span>
+              </li>
+              <li class="flex items-center text-gray-700 group">
+                <div
+                  class="w-14 h-14 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform shadow-lg shadow-blue-500/30"
+                >
+                  <i class="bi bi-shield-lock text-white text-2xl"></i>
+                </div>
+                <span class="text-base font-bold">End-to-End Encryption</span>
+              </li>
+              <li class="flex items-center text-gray-700 group">
+                <div
+                  class="w-14 h-14 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform shadow-lg shadow-purple-500/30"
+                >
+                  <i class="bi bi-patch-check text-white text-2xl"></i>
+                </div>
+                <span class="text-base font-bold">DLT Compliance</span>
+              </li>
+              <li class="flex items-center text-gray-700 group">
+                <div
+                  class="w-14 h-14 bg-gradient-to-br from-red-500 via-red-600 to-red-700 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform shadow-lg shadow-red-500/30"
+                >
+                  <i class="bi bi-x-octagon text-white text-2xl"></i>
+                </div>
+                <span class="text-base font-bold">Anti-Spam Protection</span>
+              </li>
+            </ul>
+            <a
+              href="business.html"
+              class="inline-flex items-center px-6 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold rounded-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-xl shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/40 hover:-translate-y-1 text-lg group"
+              data-testid="button-learn-more"
+            >
+              <span>Learn More</span>
+              <i class="bi bi-arrow-right ml-2 transition-transform"></i>
+            </a>
+          </div>
+          <div class="lg:w-1/2 animate-slide-left">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-green-200 to-blue-200 rounded-3xl blur-3xl opacity-30 animate-pulse-slow"></div>
+              <img
+                src="newassests/home/all_product.png"
+                alt="Verified Communications"
+                class="w-full h-auto relative z-10 drop-shadow-2xl"
+                data-testid="img-verified"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden" id="industries">
+      <!-- Background Pattern -->
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]"
+      ></div>
+
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="text-center mb-20 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-blue-200/60 shadow-sm"
+          >
+            <i class="bi bi-building text-sm"></i>
+            Industry Solutions
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight" data-testid="text-industries-title">
+            Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Corporate</span> Presence
+          </h2>
+          <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Trusted by leading enterprises across diverse industries worldwide
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <a
+            href="business.html#ecommerce"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-ecommerce"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-cart3"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">E-commerce</span>
+          </a>
+          <a
+            href="business.html#bfsi"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-bfsi"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-bank"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">BFSI</span>
+          </a>
+          <a
+            href="business.html#travel"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-travel"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-airplane"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">Travel & Food</span>
+          </a>
+          <a
+            href="business.html#healthcare"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-healthcare"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-heart-pulse"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">Healthcare</span>
+          </a>
+          <a
+            href="business.html#realestate"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-realestate"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-building"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">Real Estate</span>
+          </a>
+          <a
+            href="business.html#logistics"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-logistics"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-truck"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">Logistics</span>
+          </a>
+          <a
+            href="business.html#startups"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-startups"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-rocket-takeoff"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">Startups</span>
+          </a>
+          <a
+            href="business.html#iot"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-iot"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-cpu"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">IoT</span>
+          </a>
+          <a
+            href="business.html#entertainment"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-entertainment"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-film"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">Entertainment</span>
+          </a>
+          <a
+            href="business.html#government"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-government"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-flag"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">Government</span>
+          </a>
+          <a
+            href="business.html#pharmaceutical"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-pharma"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-capsule"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">Pharmaceutical</span>
+          </a>
+          <a
+            href="business.html#education"
+            class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 group hover:-translate-y-2"
+            data-testid="card-industry-education"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-full flex items-center justify-center text-blue-600 text-3xl mb-4 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-blue-700 group-hover:text-white transition-all duration-300 group-hover:scale-110 shadow-lg group-hover:shadow-blue-500/30"
+            >
+              <i class="bi bi-mortarboard"></i>
+            </div>
+            <span class="text-gray-700 text-sm font-bold text-center group-hover:text-blue-600 transition-colors">Education</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Section -->
+    <section class="py-20 bg-white" id="platform">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center gap-20">
+          <div class="lg:w-1/2">
+            <div>
+              <img src="newassests/home/industry_man.png" alt="Pinnacle Platform" class="w-full h-auto rounded-2xl shadow-2xl hover:shadow-blue-500/20 transition-shadow" data-testid="img-platform" />
+            </div>
+          </div>
+          <div class="lg:w-1/2 pl-10">
+            <div class="space-y-6">
+              <span
+                class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-2 tracking-wider uppercase border border-blue-200/60 shadow-sm"
+              >
+                <i class="bi bi-layers text-sm"></i>
+                Our Platform
+              </span>
+              <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight" data-testid="text-platform-title">
+                Building blocks of <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">exceptional</span> marketing experience
+              </h2>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Equip your enterprise with the best conversational experiences using our highly dependable infrastructure to support you at any scale.
+                Contextual campaigns, flexible workflows, and seamless cross-channel interactions enable your company to engage consumers in new and
+                innovative ways.
+              </p>
+              <a
+                href="business.html"
+                class="inline-block px-8 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl hover:scale-105 text-sm"
+                data-testid="button-platform-cta"
+                >Get started with the Pinnacle Platform</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <!-- Integrations Section -->
+    <section class="py-20 bg-white" id="integrations" aria-labelledby="integrations-heading">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="lg:w-1/2">
+            <div class="space-y-6">
+              <span
+                class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-2 tracking-wider uppercase border border-blue-200/60 shadow-sm"
+              >
+                <i class="bi bi-plugin text-sm"></i>
+                Integrations
+              </span>
+              <h2 id="integrations-heading" class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight" data-testid="text-integrations-title">Get more out of <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Pinnacle</span></h2>
+              <p class="text-lg md:text-xl font-bold text-gray-900">Do more with the resources you already have.</p>
+              <p class="text-base text-gray-600 leading-relaxed">
+                Enable seamless automation across all platforms with Pinnacle's APIs and Plug-ins. Our services and products can be integrated with
+                all the major applications that you might use such as Zoho Applications, WooCommerce, Shopify, Bitrix 24, WordPress, HubSpot, Magento,
+                Leadsquared, DigitalOcean, and many more.
+              </p>
+              <a
+                href="business.html#integrations"
+                class="inline-block px-8 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-lg hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all shadow-lg hover:shadow-xl hover:scale-105 text-sm"
+                data-testid="button-integrations-cta"
+                >Pinnacle's APIs and Plugins</a
+              >
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4" role="list" aria-label="Integration partners">
+              <div class="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center hover:shadow-xl hover:border-blue-300 transition-all hover:-translate-y-2" role="listitem">
+                <i class="bi bi-shop text-4xl text-blue-600 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                <span class="text-xs font-bold text-gray-700 group-hover:text-blue-600 transition-colors">Shopify</span>
+              </div>
+              <div class="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center hover:shadow-xl hover:border-blue-300 transition-all hover:-translate-y-2" role="listitem">
+                <i class="bi bi-wordpress text-4xl text-blue-600 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                <span class="text-xs font-bold text-gray-700 group-hover:text-blue-600 transition-colors">WordPress</span>
+              </div>
+              <div class="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center hover:shadow-xl hover:border-blue-300 transition-all hover:-translate-y-2" role="listitem">
+                <i class="bi bi-box text-4xl text-blue-600 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                <span class="text-xs font-bold text-gray-700 group-hover:text-blue-600 transition-colors">WooCommerce</span>
+              </div>
+              <div class="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center hover:shadow-xl hover:border-blue-300 transition-all hover:-translate-y-2" role="listitem">
+                <i class="bi bi-grid text-4xl text-blue-600 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                <span class="text-xs font-bold text-gray-700 group-hover:text-blue-600 transition-colors">Zoho</span>
+              </div>
+              <div class="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center hover:shadow-xl hover:border-blue-300 transition-all hover:-translate-y-2" role="listitem">
+                <i class="bi bi-hexagon text-4xl text-blue-600 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                <span class="text-xs font-bold text-gray-700 group-hover:text-blue-600 transition-colors">HubSpot</span>
+              </div>
+              <div class="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center hover:shadow-xl hover:border-blue-300 transition-all hover:-translate-y-2" role="listitem">
+                <i class="bi bi-lightning text-4xl text-blue-600 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                <span class="text-xs font-bold text-gray-700 group-hover:text-blue-600 transition-colors">Magento</span>
+              </div>
+              <div class="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center hover:shadow-xl hover:border-blue-300 transition-all hover:-translate-y-2" role="listitem">
+                <i class="bi bi-cloud text-4xl text-blue-600 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                <span class="text-xs font-bold text-gray-700 group-hover:text-blue-600 transition-colors">DigitalOcean</span>
+              </div>
+              <div class="group bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center justify-center hover:shadow-xl hover:border-blue-300 transition-all hover:-translate-y-2" role="listitem">
+                <i class="bi bi-diagram-3 text-4xl text-blue-600 mb-2 group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+                <span class="text-xs font-bold text-gray-700 group-hover:text-blue-600 transition-colors">Bitrix24</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section
+      class="py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden"
+      id="testimonials"
+      aria-labelledby="testimonials-heading"
+      x-data="{ activeSlide: 0, slides: 4 }"
+      x-init="setInterval(() => { activeSlide = (activeSlide + 1) % slides }, 5000)"
+    >
+      <!-- Background Pattern -->
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px]"
+        aria-hidden="true"
+      ></div>
+
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="text-center mb-20 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-blue-200/60 shadow-sm"
+          >
+            <i class="bi bi-chat-square-quote text-sm"></i>
+            Client Testimonials
+          </span>
+          <h2 id="testimonials-heading" class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight" data-testid="text-testimonials-title">
+            What Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Customers</span> are Saying
+          </h2>
+          <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Trusted by enterprises worldwide for excellence in communication solutions
+          </p>
+        </div>
+        <div class="relative max-w-5xl mx-auto" data-testid="carousel-testimonials" role="region" aria-label="Customer testimonials carousel" aria-live="polite">
+          <div class="overflow-hidden relative min-h-[400px]">
+            <div class="relative">
+              <div
+                x-show="activeSlide === 0"
+                x-transition:enter="transition-all ease-in-out duration-700"
+                x-transition:enter-start="opacity-0 translate-x-full"
+                x-transition:enter-end="opacity-100 translate-x-0"
+                x-transition:leave="transition-all ease-in-out duration-700"
+                x-transition:leave-start="opacity-100 translate-x-0"
+                x-transition:leave-end="opacity-0 -translate-x-full"
+                class="absolute inset-0"
+              >
+                <div class="bg-white rounded-3xl shadow-xs p-10 md:p-14 border border-gray-300 hover:shadow-3xl transition-shadow duration-300">
+                  <div class="flex items-start gap-4 mb-6">
+                    <i class="bi bi-quote text-7xl text-blue-600 opacity-20 -mt-4"></i>
+                    <div class="flex gap-1">
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                    </div>
+                  </div>
+                  <p class="text-xl md:text-2xl text-gray-700 mb-10 leading-relaxed font-light">
+                    We are using the SMS services from Pinnacle Teleservices. We are completely satisfied with services and support by their team. I
+                    recommend Pinnacle for various Telecom Value added services.
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-4xl shadow-lg"
+                    >
+                      <i class="bi bi-person-circle"></i>
+                    </div>
+                    <div>
+                      <h5 class="text-xl font-bold text-gray-900 mb-1">Ashwani Kumar Das</h5>
+                      <p class="text-gray-600 font-medium">General Manager-IT, Berger Paints India Ltd.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                x-show="activeSlide === 1"
+                x-transition:enter="transition-all ease-in-out duration-700"
+                x-transition:enter-start="opacity-0 translate-x-full"
+                x-transition:enter-end="opacity-100 translate-x-0"
+                x-transition:leave="transition-all ease-in-out duration-700"
+                x-transition:leave-start="opacity-100 translate-x-0"
+                x-transition:leave-end="opacity-0 -translate-x-full"
+                class="absolute inset-0"
+                style="display: none"
+              >
+                <div class="bg-white rounded-3xl shadow-xs p-10 md:p-14 border border-gray-300 hover:shadow-3xl transition-shadow duration-300">
+                  <div class="flex items-start gap-4 mb-6">
+                    <i class="bi bi-quote text-7xl text-blue-600 opacity-20 -mt-4"></i>
+                    <div class="flex gap-1">
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                    </div>
+                  </div>
+                  <p class="text-xl md:text-2xl text-gray-700 mb-10 leading-relaxed font-light">
+                    The services from Pinnacle are very prompt and moreover the service support has been fantastic and the POS integration has also
+                    been a very smooth transition. The best part is the visibility which Pinnacle provides.
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-4xl shadow-lg"
+                    >
+                      <i class="bi bi-person-circle"></i>
+                    </div>
+                    <div>
+                      <h5 class="text-xl font-bold text-gray-900 mb-1">Vikas Sethi</h5>
+                      <p class="text-gray-600 font-medium">General Manager-IT, Monte Carlo Fashions Limited</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                x-show="activeSlide === 2"
+                x-transition:enter="transition-all ease-in-out duration-700"
+                x-transition:enter-start="opacity-0 translate-x-full"
+                x-transition:enter-end="opacity-100 translate-x-0"
+                x-transition:leave="transition-all ease-in-out duration-700"
+                x-transition:leave-start="opacity-100 translate-x-0"
+                x-transition:leave-end="opacity-0 -translate-x-full"
+                class="absolute inset-0"
+                style="display: none"
+              >
+                <div class="bg-white rounded-3xl shadow-xs p-10 md:p-14 border border-gray-300 hover:shadow-3xl transition-shadow duration-300">
+                  <div class="flex items-start gap-4 mb-6">
+                    <i class="bi bi-quote text-7xl text-blue-600 opacity-20 -mt-4"></i>
+                    <div class="flex gap-1">
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                    </div>
+                  </div>
+                  <p class="text-xl md:text-2xl text-gray-700 mb-10 leading-relaxed font-light">
+                    Quality of Service by Pinnacle Teleservices is the best. Account Manager is very supportive. Even if we face any concerns, the
+                    account manager takes swift actions with a single call and resolves it.
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-4xl shadow-lg"
+                    >
+                      <i class="bi bi-person-circle"></i>
+                    </div>
+                    <div>
+                      <h5 class="text-xl font-bold text-gray-900 mb-1">Mrs Poonam Dham</h5>
+                      <p class="text-gray-600 font-medium">Head-CRM, Jain Amar Clothing Pvt Ltd</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                x-show="activeSlide === 3"
+                x-transition:enter="transition-all ease-in-out duration-700"
+                x-transition:enter-start="opacity-0 translate-x-full"
+                x-transition:enter-end="opacity-100 translate-x-0"
+                x-transition:leave="transition-all ease-in-out duration-700"
+                x-transition:leave-start="opacity-100 translate-x-0"
+                x-transition:leave-end="opacity-0 -translate-x-full"
+                class="absolute inset-0"
+                style="display: none"
+              >
+                <div class="bg-white rounded-3xl shadow-xs p-10 md:p-14 border border-gray-300 hover:shadow-3xl transition-shadow duration-300">
+                  <div class="flex items-start gap-4 mb-6">
+                    <i class="bi bi-quote text-7xl text-blue-600 opacity-20 -mt-4"></i>
+                    <div class="flex gap-1">
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                      <i class="bi bi-star-fill text-yellow-400 text-xl"></i>
+                    </div>
+                  </div>
+                  <p class="text-xl md:text-2xl text-gray-700 mb-10 leading-relaxed font-light">
+                    We developed a great partnership with PINNACLE. They have met all our expectations with timely delivery, seamless execution and
+                    hassle free customer support system.
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-4xl shadow-lg"
+                    >
+                      <i class="bi bi-person-circle"></i>
+                    </div>
+                    <div>
+                      <h5 class="text-xl font-bold text-gray-900 mb-1">Swatantra Agrahari</h5>
+                      <p class="text-gray-600 font-medium">Sr. Manager-IT, Satya Micro Capital Ltd</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center mt-12 space-x-3" role="group" aria-label="Testimonial navigation">
+            <button
+              type="button"
+              @click="activeSlide = 0"
+              :class="activeSlide === 0 ? 'bg-blue-600 w-12' : 'bg-gray-300 w-3 hover:bg-gray-400'"
+              :aria-label="'Go to testimonial ' + (0 + 1)"
+              :aria-current="activeSlide === 0 ? 'true' : 'false'"
+              class="h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            ></button>
+            <button
+              type="button"
+              @click="activeSlide = 1"
+              :class="activeSlide === 1 ? 'bg-blue-600 w-12' : 'bg-gray-300 w-3 hover:bg-gray-400'"
+              :aria-label="'Go to testimonial ' + (1 + 1)"
+              :aria-current="activeSlide === 1 ? 'true' : 'false'"
+              class="h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            ></button>
+            <button
+              type="button"
+              @click="activeSlide = 2"
+              :class="activeSlide === 2 ? 'bg-blue-600 w-12' : 'bg-gray-300 w-3 hover:bg-gray-400'"
+              :aria-label="'Go to testimonial ' + (2 + 1)"
+              :aria-current="activeSlide === 2 ? 'true' : 'false'"
+              class="h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            ></button>
+            <button
+              type="button"
+              @click="activeSlide = 3"
+              :class="activeSlide === 3 ? 'bg-blue-600 w-12' : 'bg-gray-300 w-3 hover:bg-gray-400'"
+              :aria-label="'Go to testimonial ' + (3 + 1)"
+              :aria-current="activeSlide === 3 ? 'true' : 'false'"
+              class="h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-blue-800" id="cta" aria-labelledby="cta-heading">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-white/20 shadow-2xl">
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div class="lg:w-2/3">
+              <h2 id="cta-heading" class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-5 leading-tight" data-testid="text-cta-title">Ready to Transform Your Communication?</h2>
+              <p class="text-base md:text-lg text-gray-100/90 leading-relaxed">Join 6000+ enterprises that trust Pinnacle for their communication needs.</p>
+            </div>
+            <div class="lg:w-1/3 flex flex-col gap-4 w-full lg:items-end">
+              <a
+                href="contact.html"
+                class="group inline-block w-full lg:w-auto text-center px-8 py-4 bg-white text-blue-900 font-bold rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900 transition-all shadow-xl hover:shadow-2xl hover:scale-105 text-sm"
+                data-testid="button-cta-contact"
+                ><span class="group-hover:scale-105 inline-block transition-transform">Contact Us</span></a
+              >
+              <a
+                href="contact.html#demo"
+                class="group inline-block w-full lg:w-auto text-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900 transition-all hover:scale-105 text-sm"
+                data-testid="button-cta-demo"
+                ><span class="group-hover:scale-105 inline-block transition-transform">Get Started</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300" id="footer" role="contentinfo">
+      <div class="container mx-auto px-4">
+        <div class="py-12 md:py-16">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="lg:col-span-1">
+              <div class="space-y-4">
+                <div class="mb-4">
+                  <span class="text-2xl font-bold text-white">PINNACLE</span>
+                  <span class="block text-sm text-gray-400">Teleservices</span>
+                </div>
+                <p class="text-sm leading-relaxed">
+                  Pinnacle has been the trusted partner for large and small enterprises since 2003, providing end-to-end communication solutions.
+                </p>
+                <div class="flex space-x-3" role="list" aria-label="Social media links">
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Facebook page (opens in new tab)"
+                    class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all hover:shadow-lg hover:shadow-blue-500/50 hover:scale-110"
+                    data-testid="link-social-facebook"
+                    role="listitem"
+                    ><i class="bi bi-facebook" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Twitter page (opens in new tab)"
+                    class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all hover:shadow-lg hover:shadow-blue-500/50 hover:scale-110"
+                    data-testid="link-social-twitter"
+                    role="listitem"
+                    ><i class="bi bi-twitter-x" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our LinkedIn page (opens in new tab)"
+                    class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all hover:shadow-lg hover:shadow-blue-500/50 hover:scale-110"
+                    data-testid="link-social-linkedin"
+                    role="listitem"
+                    ><i class="bi bi-linkedin" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Instagram page (opens in new tab)"
+                    class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all hover:shadow-lg hover:shadow-blue-500/50 hover:scale-110"
+                    data-testid="link-social-instagram"
+                    role="listitem"
+                    ><i class="bi bi-instagram" aria-hidden="true"></i
+                  ></a>
+                  <a
+                    href="https://youtube.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our YouTube channel (opens in new tab)"
+                    class="w-11 h-11 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all hover:shadow-lg hover:shadow-blue-500/50 hover:scale-110"
+                    data-testid="link-social-youtube"
+                    role="listitem"
+                    ><i class="bi bi-youtube" aria-hidden="true"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <nav aria-label="Company links">
+              <h5 class="text-white text-sm font-extrabold mb-5 tracking-wider uppercase">Company</h5>
+              <ul class="space-y-3">
+                <li><a href="about.html" class="text-sm hover:text-blue-400 focus:text-blue-400 focus:outline-none focus:underline transition-all hover:translate-x-1 inline-block" data-testid="link-footer-about">About Us</a></li>
+                <li><a href="career.html" class="text-sm hover:text-blue-400 focus:text-blue-400 focus:outline-none focus:underline transition-all hover:translate-x-1 inline-block" data-testid="link-footer-career">Careers</a></li>
+                <li><a href="gallery.html" class="text-sm hover:text-blue-400 focus:text-blue-400 focus:outline-none focus:underline transition-all hover:translate-x-1 inline-block" data-testid="link-footer-gallery">Gallery</a></li>
+                <li><a href="contact.html" class="text-sm hover:text-blue-400 focus:text-blue-400 focus:outline-none focus:underline transition-all hover:translate-x-1 inline-block" data-testid="link-footer-contact">Contact Us</a></li>
+              </ul>
+            </nav>
+            <nav aria-label="Solutions links">
+              <h5 class="text-white text-sm font-extrabold mb-5 tracking-wider uppercase">Solutions</h5>
+              <ul class="space-y-3">
+                <li><a href="business.html#messaging" class="text-sm hover:text-blue-400 focus:text-blue-400 focus:outline-none focus:underline transition-all hover:translate-x-1 inline-block">Messaging</a></li>
+                <li><a href="business.html#whatsapp" class="text-sm hover:text-blue-400 focus:text-blue-400 focus:outline-none focus:underline transition-all hover:translate-x-1 inline-block">WhatsApp API</a></li>
+                <li><a href="business.html#rcs" class="text-sm hover:text-blue-400 focus:text-blue-400 focus:outline-none focus:underline transition-all hover:translate-x-1 inline-block">RCS</a></li>
+                <li><a href="business.html#voice" class="text-sm hover:text-blue-400 focus:text-blue-400 focus:outline-none focus:underline transition-all hover:translate-x-1 inline-block">Voice</a></li>
+                <li><a href="business.html#email" class="text-sm hover:text-blue-400 focus:text-blue-400 focus:outline-none focus:underline transition-all hover:translate-x-1 inline-block">Email</a></li>
+              </ul>
+            </nav>
+            <address class="not-italic">
+              <h5 class="text-white text-sm font-extrabold mb-5 tracking-wider uppercase">Contact Info</h5>
+              <ul class="space-y-3">
+                <li class="flex items-start">
+                  <i class="bi bi-geo-alt text-blue-500 mr-3 mt-1" aria-hidden="true"></i>
+                  <span class="text-sm">123 Business Park, Tech City, India - 400001</span>
+                </li>
+                <li class="flex items-center">
+                  <i class="bi bi-telephone text-blue-500 mr-3" aria-hidden="true"></i>
+                  <a href="tel:+911800123456" class="hover:text-white focus:text-white focus:outline-none focus:underline transition-colors">1800-123-4567</a>
+                </li>
+                <li class="flex items-center">
+                  <i class="bi bi-envelope text-blue-500 mr-3" aria-hidden="true"></i>
+                  <a href="mailto:info@pinnacle.in" class="hover:text-white focus:text-white focus:outline-none focus:underline transition-colors">info@pinnacle.in</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 py-6">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-sm">&copy; 2024 Pinnacle Teleservices. All Rights Reserved.</p>
+            <nav aria-label="Legal links">
+              <ul class="flex space-x-6 text-sm">
+                <li><a href="privacy-policy.html" class="hover:text-white focus:text-white focus:outline-none focus:underline transition-colors">Privacy Policy</a></li>
+                <li><a href="terms-of-service.html" class="hover:text-white focus:text-white focus:outline-none focus:underline transition-colors">Terms of Service</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      type="button"
+      class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-full shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all opacity-0 invisible hover:scale-110 z-50 group"
+      id="backToTop"
+      aria-label="Scroll back to top"
+      data-testid="button-back-to-top"
+      x-data="{ show: false }"
+      @scroll.window="show = window.pageYOffset > 300"
+      x-show="show"
+      x-transition
+      @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <i class="bi bi-arrow-up text-xl group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+    </button>
+
+    <!-- Alpine.js for interactive components -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

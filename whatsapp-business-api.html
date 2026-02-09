@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WhatsApp Business API - Connect with customers through official WhatsApp Business API with Pinnacle Teleservices.">
+    <meta property="og:title" content="WhatsApp Business API - Official Partner | Pinnacle Teleservices">
+    <meta property="og:description" content="Leverage the power of WhatsApp Business API to engage with your customers through the world's most popular messaging platform.">
+    <meta property="og:type" content="website">
+    <title>WhatsApp Business API - Official Partner | Pinnacle Teleservices</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
+            fontSize: {
+              'xs': ['0.75rem', { lineHeight: '1rem' }],
+              'sm': ['0.8125rem', { lineHeight: '1.25rem' }],
+              'base': ['0.9375rem', { lineHeight: '1.5rem' }],
+              'lg': ['1.0625rem', { lineHeight: '1.75rem' }],
+              'xl': ['1.1875rem', { lineHeight: '1.75rem' }],
+              '2xl': ['1.4375rem', { lineHeight: '2rem' }],
+              '3xl': ['1.8125rem', { lineHeight: '2.25rem' }],
+              '4xl': ['2.1875rem', { lineHeight: '2.5rem' }],
+              '5xl': ['2.8125rem', { lineHeight: '1' }],
+              '6xl': ['3.125rem', { lineHeight: '1' }],
+              '7xl': ['3.5rem', { lineHeight: '1' }],
+            },
+          },
+        },
+      }
+    </script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+      }
+
+      /* Animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+      }
+
+      @keyframes slide-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-slide-up {
+        animation: slide-up 0.6s ease-out;
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 min-h-screen flex items-center overflow-hidden" id="hero">
+      <!-- Animated Background Orbs -->
+      <div class="absolute inset-0 overflow-hidden opacity-30">
+        <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+        <div class="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 2s"></div>
+        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-indigo-500 to-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 4s"></div>
+      </div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen py-16 gap-12">
+          <div class="w-full lg:w-7/12 xl:w-6/12">
+            <div class="text-white space-y-6 animate-slide-up">
+              <div class="flex items-center space-x-2 text-gray-400 text-sm mb-2">
+                <a href="index.html" class="hover:text-white transition-colors"><i class="bi bi-house-door"></i> Home</a>
+                <span>/</span>
+                <span class="text-gray-300">WhatsApp Business API</span>
+              </div>
+              <p class="inline-block text-xs md:text-xs font-bold px-3 py-1 bg-green-500/20 backdrop-blur-sm rounded-full text-green-300 border border-green-400/30 uppercase animate-fade-in" data-testid="text-hero-subtitle">WhatsApp Business API</p>
+              <div class="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 leading-[1.1] tracking-tight" data-testid="text-hero-title" style="animation-delay: 0.5s">Engage Customers<br /><span class="bg-gradient-to-r from-green-200 via-emerald-300 to-green-200 bg-clip-text text-transparent animate-shimmer delay-700 bg-[length:200%_100%]">on WhatsApp</span></div>
+              <p class="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl font-light" data-testid="text-hero-description" style="animation-delay: 0.4s">Leverage the world's most popular messaging platform for business communication. Official API, automation, and rich media for customer engagement.</p>
+              <div class="flex flex-col sm:flex-row gap-4 pt-2" style="animation-delay: 0.6s">
+                <a href="contact.html#demo" class="group inline-flex items-center justify-center px-7 py-3.5 text-sm bg-gradient-to-r from-green-600 to-green-700 text-white font-bold rounded-xl hover:from-green-700 hover:to-green-800 transition-all duration-300 shadow-2xl shadow-green-500/40 hover:shadow-green-500/60 hover:-translate-y-1 hover:scale-105 relative overflow-hidden" data-testid="button-hero-demo">
+                  <span class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
+                  <i class="bi bi-calendar-check mr-2 text-base group-hover:scale-105 transition-transform"></i>
+                  <span>Schedule a Demo</span>
+                </a>
+                <a href="contact.html" class="inline-flex items-center justify-center px-7 py-3.5 text-sm bg-white/10 backdrop-blur-md border-2 border-white/40 text-white font-bold rounded-xl hover:bg-white hover:text-green-900 hover:border-white transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl" data-testid="button-hero-sales">
+                  <i class="bi bi-telephone mr-2 text-base"></i>
+                  <span>Talk to Sales</span>
+                </a>
+              </div>
+              <div class="flex items-center gap-4 p-2 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 w-fit hover:bg-white/10 transition-all duration-300 group" style="animation-delay: 0.8s">
+                <div class="w-64 h-fit bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                  <img src="newassests/home/whatsapp-meta.png" alt="Meta Premier Partner" class="w-64 h-fit" data-testid="img-meta-partner" />
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-white">Premier Partner</p>
+                  <p class="text-[10px] text-gray-400 font-medium">of Meta Platform</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video Section -->
+          <div class="lg:w-5/12 xl:w-6/12 animate-slide-left">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-green-500/30 to-purple-500/30 rounded-2xl blur-3xl"></div>
+              <div class="relative overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-slate-800 to-slate-900">
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline poster="assets/images/video-poster.jpg">
+                  <source src="newassests/home/hero_section_video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 animate-slide-up">
+            <span
+              class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-2 tracking-wider uppercase border border-green-200/60 shadow-sm"
+            >
+              <i class="bi bi-whatsapp text-sm"></i>
+              Premier Partner of Meta
+            </span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              Enrich Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Customer Experience</span>
+            </h2>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Connect with 2 billion users across the globe with a fast, user-friendly, secure, and reliable platform. Empower your enterprise to provide real-time 2-way communication by integrating our WhatsApp Business APIs to send and receive messages.
+            </p>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Pinnacle Teleservices is now a Premier Partner of Meta, helping businesses leverage the full potential of WhatsApp to engage customers, drive sales, and provide exceptional service experiences.
+            </p>
+          </div>
+          <div class="animate-float">
+            <img src="https://via.placeholder.com/600x400?text=WhatsApp+Business+API" alt="WhatsApp Business API" class="rounded-2xl shadow-2xl hover:shadow-green-500/20 transition-shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-green-200/60 shadow-sm"
+          >
+            <i class="bi bi-building text-sm"></i>
+            Expanding Industries
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Industries Utilizing <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">WhatsApp Business API</span>
+          </h2>
+        </div>
+        <div class="flex flex-wrap justify-center gap-4 mb-16">
+          <span class="px-6 py-3 bg-white rounded-full text-sm font-bold text-gray-700 border border-green-200 shadow-sm hover:shadow-md transition-all">Insurance</span>
+          <span class="px-6 py-3 bg-white rounded-full text-sm font-bold text-gray-700 border border-green-200 shadow-sm hover:shadow-md transition-all">Banking</span>
+          <span class="px-6 py-3 bg-white rounded-full text-sm font-bold text-gray-700 border border-green-200 shadow-sm hover:shadow-md transition-all">Healthcare</span>
+          <span class="px-6 py-3 bg-white rounded-full text-sm font-bold text-gray-700 border border-green-200 shadow-sm hover:shadow-md transition-all">Telecom</span>
+          <span class="px-6 py-3 bg-white rounded-full text-sm font-bold text-gray-700 border border-green-200 shadow-sm hover:shadow-md transition-all">Entertainment</span>
+          <span class="px-6 py-3 bg-white rounded-full text-sm font-bold text-gray-700 border border-green-200 shadow-sm hover:shadow-md transition-all">Ecommerce</span>
+          <span class="px-6 py-3 bg-white rounded-full text-sm font-bold text-gray-700 border border-green-200 shadow-sm hover:shadow-md transition-all">Automotive</span>
+          <span class="px-6 py-3 bg-white rounded-full text-sm font-bold text-gray-700 border border-green-200 shadow-sm hover:shadow-md transition-all">Education</span>
+        </div>
+
+        <!-- COVID-19 Stats -->
+        <div class="bg-gradient-to-br from-green-600 to-emerald-600 rounded-3xl p-10 md:p-14 text-white shadow-2xl">
+          <h3 class="text-2xl md:text-3xl font-extrabold mb-8 text-center">Topnotch Lab Diagnostics for COVID-19 Tests Supported by WhatsApp Business Platform</h3>
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-extrabold mb-3">94%</div>
+              <p class="text-base text-green-50">of interactions don't need live agent support</p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-extrabold mb-3">90%</div>
+              <p class="text-base text-green-50">customer satisfaction rating improvement since implementation</p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-extrabold mb-3">$2.5M</div>
+              <p class="text-base text-green-50">estimated savings in customer service with WhatsApp</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 animate-slide-up">
+            <span
+              class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-2 tracking-wider uppercase border border-green-200/60 shadow-sm"
+            >
+              <i class="bi bi-puzzle text-sm"></i>
+              WhatsApp Business API Integration
+            </span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              Easy to Integrate <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Across Platforms</span>
+            </h2>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Engage with your customers seamlessly through multiple platforms you already use such as CRM, ticketing systems, ERP, HRMS, and POS, and proactively send automated transactional messages to customers with improved quality of the interactions.
+            </p>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Our workflows are evolving with use cases that we handle for our clients and this is immensely helping our conversational AI to deliver a better customer experience.
+            </p>
+          </div>
+          <div class="animate-float">
+            <img src="https://via.placeholder.com/600x400?text=WhatsApp+Integration" alt="WhatsApp Integration" class="rounded-2xl shadow-2xl hover:shadow-green-500/20 transition-shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-green-200/60 shadow-sm"
+          >
+            <i class="bi bi-stars text-sm"></i>
+            Seamless Integrations
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            WhatsApp API Integrations for <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Business Communication</span>
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-green-500/50">
+                <i class="bi bi-bell"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Notification</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Send important alerts and keep your customers informed in 70+ languages for more engagement
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-emerald-500/50">
+                <i class="bi bi-headset"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Helpdesk</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Configure smooth handover to your Live agent and resolve the customer queries and grievances 24x7
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-green-500/50">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Tracking & Location</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Track real-time location status and find the nearest Service Centre, Branch, or ATM
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-teal-500/50">
+                <i class="bi bi-box-seam"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Order & Delivery Update</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Send order updates, and schedule delivery or pickup with time notification
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp API Service Provider Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-green-200/60 shadow-sm"
+          >
+            <i class="bi bi-award text-sm"></i>
+            WhatsApp API Service Provider
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Pinnacle - WhatsApp API Service Provider in <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">India</span>
+          </h2>
+          <p class="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Pinnacle is an experienced collaborator, we delivered complex BOTS for several brands till date by seamlessly automating their business processes helping businesses to connect with their customers on our indigenous BOT platform.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div class="text-center p-6 bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 hover:shadow-lg transition-all">
+            <i class="bi bi-building text-4xl text-green-600 mb-3"></i>
+            <p class="text-sm font-bold text-gray-700">Hotel and Hospitality</p>
+          </div>
+          <div class="text-center p-6 bg-gradient-to-br from-emerald-50 to-white rounded-xl border border-emerald-100 hover:shadow-lg transition-all">
+            <i class="bi bi-airplane text-4xl text-emerald-600 mb-3"></i>
+            <p class="text-sm font-bold text-gray-700">Travels and Tourism</p>
+          </div>
+          <div class="text-center p-6 bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 hover:shadow-lg transition-all">
+            <i class="bi bi-bank text-4xl text-green-600 mb-3"></i>
+            <p class="text-sm font-bold text-gray-700">Finance and Insurance</p>
+          </div>
+          <div class="text-center p-6 bg-gradient-to-br from-teal-50 to-white rounded-xl border border-teal-100 hover:shadow-lg transition-all">
+            <i class="bi bi-phone text-4xl text-teal-600 mb-3"></i>
+            <p class="text-sm font-bold text-gray-700">Telecom</p>
+          </div>
+          <div class="text-center p-6 bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 hover:shadow-lg transition-all">
+            <i class="bi bi-truck text-4xl text-green-600 mb-3"></i>
+            <p class="text-sm font-bold text-gray-700">Logistics</p>
+          </div>
+          <div class="text-center p-6 bg-gradient-to-br from-emerald-50 to-white rounded-xl border border-emerald-100 hover:shadow-lg transition-all">
+            <i class="bi bi-car-front text-4xl text-emerald-600 mb-3"></i>
+            <p class="text-sm font-bold text-gray-700">Automobile</p>
+          </div>
+          <div class="text-center p-6 bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 hover:shadow-lg transition-all">
+            <i class="bi bi-book text-4xl text-green-600 mb-3"></i>
+            <p class="text-sm font-bold text-gray-700">Education</p>
+          </div>
+          <div class="text-center p-6 bg-gradient-to-br from-teal-50 to-white rounded-xl border border-teal-100 hover:shadow-lg transition-all">
+            <i class="bi bi-heart-pulse text-4xl text-teal-600 mb-3"></i>
+            <p class="text-sm font-bold text-gray-700">Health Care</p>
+          </div>
+          <div class="text-center p-6 bg-gradient-to-br from-green-50 to-white rounded-xl border border-green-100 hover:shadow-lg transition-all">
+            <i class="bi bi-cart text-4xl text-green-600 mb-3"></i>
+            <p class="text-sm font-bold text-gray-700">Retail and E-Commerce</p>
+          </div>
+          <div class="text-center p-6 bg-gradient-to-br from-emerald-50 to-white rounded-xl border border-emerald-100 hover:shadow-lg transition-all">
+            <i class="bi bi-house text-4xl text-emerald-600 mb-3"></i>
+            <p class="text-sm font-bold text-gray-700">Real Estate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Communication Change Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-green-200/60 shadow-sm"
+          >
+            <i class="bi bi-trophy text-sm"></i>
+            Why Choose Pinnacle
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Why Top Leading Brands Choose <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Pinnacle</span>
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-patch-check text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Official Business Profile</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Create professional business profile with verified green tick badge</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-shield-lock text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">End-to-End Encryption</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Complete security with WhatsApp's proven encryption standards</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-translate text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Multilingual Support</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Communicate in 70+ languages for global reach</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-diagram-3 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">CRM Integration</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Seamless integration with your existing CRM systems</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-code-square text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Webhook Integration</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Real-time event notifications for instant updates</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-600 to-green-700 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-speedometer2 text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Admin Portal</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Dedicated management dashboard for complete control</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-arrow-left-right text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Bot-to-Agent Transfer</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Smooth handover from automation to human support</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-bar-chart text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Detailed Reports</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Comprehensive analytics and performance insights</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-chat-text text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Custom Messages</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Personalized messaging with rich media support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Automation Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-green-200/60 shadow-sm"
+          >
+            <i class="bi bi-lightning text-sm"></i>
+            Workflow Automation
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Manage Workflow with <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">WhatsApp Automation</span>
+          </h2>
+          <p class="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
+            Our platform offers intuitive workflow nodes that make automation simple and powerful
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border border-green-100 hover:shadow-lg transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center text-white text-xl mb-4 shadow-md">
+              <i class="bi bi-chat-left-dots"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Send Message</h3>
+            <p class="text-sm text-gray-600">Trigger automated messages based on customer actions</p>
+          </div>
+          <div class="bg-gradient-to-br from-emerald-50 to-white p-6 rounded-xl border border-emerald-100 hover:shadow-lg transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center text-white text-xl mb-4 shadow-md">
+              <i class="bi bi-hourglass-split"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Wait</h3>
+            <p class="text-sm text-gray-600">Add timing delays between workflow steps</p>
+          </div>
+          <div class="bg-gradient-to-br from-teal-50 to-white p-6 rounded-xl border border-teal-100 hover:shadow-lg transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-teal-500 to-teal-600 rounded-lg flex items-center justify-center text-white text-xl mb-4 shadow-md">
+              <i class="bi bi-diagram-3"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Condition</h3>
+            <p class="text-sm text-gray-600">Create branching logic based on user responses</p>
+          </div>
+          <div class="bg-gradient-to-br from-green-50 to-white p-6 rounded-xl border border-green-100 hover:shadow-lg transition-all">
+            <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center text-white text-xl mb-4 shadow-md">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">API Call</h3>
+            <p class="text-sm text-gray-600">Integrate with external systems seamlessly</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp ChatBot Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="animate-slide-up">
+            <span
+              class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-green-200/60 shadow-sm"
+            >
+              <i class="bi bi-robot text-sm"></i>
+              Intelligent Automation
+            </span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5 leading-tight">
+              WhatsApp <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">ChatBot</span>
+            </h2>
+            <p class="text-base text-gray-600 mb-6 leading-relaxed">
+              Connect, Communicate, and Sell with ease. Reach customers on WhatsApp to share brand information quickly.
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="bi bi-check2 text-green-600 text-sm font-bold"></i>
+                </div>
+                <span class="text-sm text-gray-700">Automated customer engagement 24/7</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="bi bi-check2 text-green-600 text-sm font-bold"></i>
+                </div>
+                <span class="text-sm text-gray-700">Instant product information and support</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="bi bi-check2 text-green-600 text-sm font-bold"></i>
+                </div>
+                <span class="text-sm text-gray-700">Seamless sales and order processing</span>
+              </li>
+            </ul>
+          </div>
+          <div class="relative">
+            <div class="bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl p-8 shadow-xl">
+              <img src="assets/whatsapp-chatbot.jpg" alt="WhatsApp ChatBot" class="w-full rounded-lg shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Human in the Loop Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="relative order-2 lg:order-1">
+            <div class="bg-gradient-to-br from-emerald-100 to-green-100 rounded-2xl p-8 shadow-xl">
+              <img src="assets/human-loop.jpg" alt="Human in the Loop" class="w-full rounded-lg shadow-lg" />
+            </div>
+          </div>
+          <div class="animate-slide-up order-1 lg:order-2">
+            <span
+              class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-green-200/60 shadow-sm"
+            >
+              <i class="bi bi-people text-sm"></i>
+              Smart Handover
+            </span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-5 leading-tight">
+              Human in the <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Loop</span>
+            </h2>
+            <p class="text-base text-gray-600 mb-6 leading-relaxed">
+              Configure smooth handover from chatbot to human agent when complex queries need personal attention. Ensure customers always get the right support at the right time.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4 p-4 bg-gradient-to-r from-green-50 to-white rounded-xl border border-green-100">
+                <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                  <i class="bi bi-arrow-repeat text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-extrabold text-gray-900 mb-1">Seamless Transition</h4>
+                  <p class="text-xs text-gray-600">Instant bot-to-agent handover with full context</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-4 bg-gradient-to-r from-emerald-50 to-white rounded-xl border border-emerald-100">
+                <div class="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                  <i class="bi bi-clock-history text-lg"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-extrabold text-gray-900 mb-1">24/7 Availability</h4>
+                  <p class="text-xs text-gray-600">Live agent support whenever needed</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-green-200/60 shadow-sm"
+          >
+            <i class="bi bi-gift text-sm"></i>
+            Key Benefits
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Transform Your Business with <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">WhatsApp</span>
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-green-500/50">
+                <i class="bi bi-globe"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Global Connectivity</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Connect with 2 billion WhatsApp users worldwide and expand your reach globally
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-emerald-500/50">
+                <i class="bi bi-rocket-takeoff"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Fast Onboarding</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Quick and simple setup process to get your business messaging in days
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-green-500/50">
+                <i class="bi bi-stars"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Rich Customer Experience</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Engage with multimedia messages, interactive buttons, and personalized content
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-teal-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-teal-500/50">
+                <i class="bi bi-lightning-charge"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Quick Message Delivery</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Instant message delivery with high read rates and real-time responses
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-green-500/50">
+                <i class="bi bi-robot"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Bot Integration</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Automate responses and workflows with intelligent chatbot capabilities
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-emerald-600 to-green-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-emerald-500/50">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Attractive Portfolio</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Showcase your products and services with rich media catalogs
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-green-50 to-emerald-50 text-green-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-green-200/60 shadow-sm"
+          >
+            <i class="bi bi-lightbulb text-sm"></i>
+            Use Cases
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Versatile <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Solutions</span>
+          </h2>
+          <p class="text-base text-gray-600 max-w-2xl mx-auto">For every business need across industries</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="group bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-green-100">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-green-700 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-green-500/50">
+                <i class="bi bi-cart-check text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-extrabold text-gray-900 mb-3">E-commerce</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Send order confirmations, shipping updates, delivery notifications, and handle customer inquiries seamlessly.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-gradient-to-br from-emerald-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-emerald-100">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-emerald-500/50">
+                <i class="bi bi-hospital text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-extrabold text-gray-900 mb-3">Healthcare</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Share appointment reminders, lab reports, prescription details, and provide telemedicine support.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-gradient-to-br from-teal-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-teal-100">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-teal-600 to-teal-700 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-teal-500/50">
+                <i class="bi bi-bank text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-extrabold text-gray-900 mb-3">Banking & Finance</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Send transaction alerts, account notifications, payment reminders, and provide secure customer support.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-gradient-to-br from-green-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-green-100">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-green-700 to-green-800 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-green-500/50">
+                <i class="bi bi-megaphone text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-extrabold text-gray-900 mb-3">Marketing</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Run promotional campaigns, share product launches, send personalized offers, and drive customer engagement.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-green-900 to-green-800">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-white/20 shadow-2xl">
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 class="text-2xl md:text-3xl lg:text-3xl font-extrabold text-white mb-5 leading-tight">Let's Connect - Let's Reach Out</h2>
+              <p class="text-base text-gray-100/90 leading-relaxed">Start engaging your customers with real-time, personalized communication. Transform your customer experience today with WhatsApp Business API.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-end">
+              <a href="contact.html" class="group px-8 py-4 bg-white text-green-900 font-bold rounded-lg hover:bg-gray-50 transition-all text-center shadow-xl hover:shadow-2xl hover:scale-105 text-sm">
+                <span class="group-hover:scale-105 inline-block transition-transform">Get Started Now</span>
+              </a>
+              <a href="contact.html#demo" class="group px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-green-900 transition-all text-center hover:scale-105 text-sm">
+                <span class="group-hover:scale-105 inline-block transition-transform">Schedule a Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

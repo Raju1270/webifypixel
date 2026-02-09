@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RCS Business Messaging - Next generation rich messaging for enterprises with Pinnacle Teleservices.">
+    <meta property="og:title" content="RCS Business Messaging - Rich Communication Services | Pinnacle Teleservices">
+    <meta property="og:description" content="Transform customer engagement with RCS Business Messaging - the next evolution of SMS with rich media, verified sender, and interactive features.">
+    <meta property="og:type" content="website">
+    <title>RCS Business Messaging - Rich Communication Services | Pinnacle Teleservices</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
+            fontSize: {
+              'xs': ['0.75rem', { lineHeight: '1rem' }],
+              'sm': ['0.8125rem', { lineHeight: '1.25rem' }],
+              'base': ['0.9375rem', { lineHeight: '1.5rem' }],
+              'lg': ['1.0625rem', { lineHeight: '1.75rem' }],
+              'xl': ['1.1875rem', { lineHeight: '1.75rem' }],
+              '2xl': ['1.4375rem', { lineHeight: '2rem' }],
+              '3xl': ['1.8125rem', { lineHeight: '2.25rem' }],
+              '4xl': ['2.1875rem', { lineHeight: '2.5rem' }],
+              '5xl': ['2.8125rem', { lineHeight: '1' }],
+              '6xl': ['3.125rem', { lineHeight: '1' }],
+              '7xl': ['3.5rem', { lineHeight: '1' }],
+            },
+          },
+        },
+      }
+    </script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+      }
+
+      /* Animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+      }
+
+      @keyframes slide-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-slide-up {
+        animation: slide-up 0.6s ease-out;
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Page Header -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 min-h-screen flex items-center overflow-hidden" id="hero">
+      <!-- Animated Background Orbs -->
+      <div class="absolute inset-0 overflow-hidden opacity-30">
+        <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+        <div class="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 2s"></div>
+        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 4s"></div>
+      </div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen py-16 gap-12">
+          <div class="w-full lg:w-7/12 xl:w-6/12">
+            <div class="text-white space-y-6 animate-slide-up">
+              <div class="flex items-center space-x-2 text-gray-400 text-sm mb-2">
+                <a href="index.html" class="hover:text-white transition-colors"><i class="bi bi-house-door"></i> Home</a>
+                <span>/</span>
+                <span class="text-gray-300">RCS Business Messaging</span>
+              </div>
+              <p class="inline-block text-xs md:text-xs font-bold px-3 py-1 bg-blue-500/20 backdrop-blur-sm rounded-full text-blue-300 border border-blue-400/30 uppercase animate-fade-in" data-testid="text-hero-subtitle">RCS Business Messaging</p>
+              <div class="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 leading-[1.1] tracking-tight" data-testid="text-hero-title" style="animation-delay: 0.5s">Next Generation<br /><span class="bg-gradient-to-r from-blue-200 via-cyan-300 to-blue-200 bg-clip-text text-transparent animate-shimmer delay-700 bg-[length:200%_100%]">Rich Communication</span> Services</div>
+              <p class="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl font-light" data-testid="text-hero-description" style="animation-delay: 0.4s">Transform your customer engagement with interactive, media-rich messaging. Verified sender, carousels, quick replies, and more for modern business communication.</p>
+              <div class="flex flex-col sm:flex-row gap-4 pt-2" style="animation-delay: 0.6s">
+                <a href="contact.html#demo" class="group inline-flex items-center justify-center px-7 py-3.5 text-sm bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow-2xl shadow-blue-500/40 hover:shadow-blue-500/60 hover:-translate-y-1 hover:scale-105 relative overflow-hidden" data-testid="button-hero-demo">
+                  <span class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
+                  <i class="bi bi-calendar-check mr-2 text-base group-hover:scale-105 transition-transform"></i>
+                  <span>Schedule a Demo</span>
+                </a>
+                <a href="contact.html" class="inline-flex items-center justify-center px-7 py-3.5 text-sm bg-white/10 backdrop-blur-md border-2 border-white/40 text-white font-bold rounded-xl hover:bg-white hover:text-blue-900 hover:border-white transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl" data-testid="button-hero-sales">
+                  <i class="bi bi-telephone mr-2 text-base"></i>
+                  <span>Talk to Sales</span>
+                </a>
+              </div>
+              <div class="flex items-center gap-4 p-2 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 w-fit hover:bg-white/10 transition-all duration-300 group" style="animation-delay: 0.8s">
+                <div class="w-64 h-fit bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                  <img src="newassests/home/whatsapp-meta.png" alt="Meta Premier Partner" class="w-64 h-fit" data-testid="img-meta-partner" />
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-white">Premier Partner</p>
+                  <p class="text-[10px] text-gray-400 font-medium">of Meta Platform</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video Section -->
+          <div class="lg:w-5/12 xl:w-6/12 animate-slide-left">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl"></div>
+              <div class="relative overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-slate-800 to-slate-900">
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline poster="assets/images/video-poster.jpg">
+                  <source src="newassests/home/hero_section_video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6 animate-slide-up">
+            <span
+              class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-2 tracking-wider uppercase border border-blue-200/60 shadow-sm"
+            >
+              <i class="bi bi-chat-dots-fill text-sm"></i>
+              Next Generation
+            </span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              RCS Business Messaging Service - <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Reinvent Mobile Marketing</span>
+            </h2>
+            <p class="text-base text-gray-600 leading-relaxed">
+              RCS (Rich Communication Services) upgrades the simple SMS with rich media, interaction, and analytics. Increase engagement, improve customer experience, and increase conversation rates by leveraging the potential of RCS Business Messaging.
+            </p>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Branding, trust marks, rich cards, carousels, recommended responses, and action buttons are also added, offering enormous possibilities to scale along with evolving customer preferences for interacting with your brand.
+            </p>
+            <p class="text-base text-gray-600 leading-relaxed">
+              Pinnacle Teleservices is a certified RCS provider, helping businesses leverage this cutting-edge technology to create engaging, interactive customer experiences at scale.
+            </p>
+          </div>
+          <div class="animate-float">
+            <img src="https://via.placeholder.com/600x400?text=RCS+Business+Messaging" alt="RCS Business Messaging" class="rounded-2xl shadow-2xl hover:shadow-blue-500/20 transition-shadow">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Message to Impress Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-blue-200/60 shadow-sm"
+          >
+            <i class="bi bi-stars text-sm"></i>
+            RCS Messaging Services
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Message to <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Impress</span>
+          </h2>
+          <p class="text-base text-gray-600 max-w-2xl mx-auto">Transform customer interactions with rich, engaging messaging</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-blue-500/50">
+                <i class="bi bi-cart-check"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Transaction</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Make your transactions fast and seamless across various industries by giving direct links with various offers with the images.
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-cyan-500/50">
+                <i class="bi bi-megaphone"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Marketing</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Market your brand seamlessly and increase engagement with creating attractive business catalogues and service offers.
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-indigo-500/50">
+                <i class="bi bi-headset"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Customer Service</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Enhance customer engagement with instant help options. Businesses can provide direct link to the support team to the clients to ease their reach regarding any concern.
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-purple-500/50">
+                <i class="bi bi-clipboard-data"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Feedback Insights</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Create survey and feedback forms which allows two-way messaging. This helps your business in data gathering.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Top Leading Brands Choose Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-blue-200/60 shadow-sm"
+          >
+            <i class="bi bi-award text-sm"></i>
+            Why Choose Us
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Why Top Leading Brands Choose <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Pinnacle</span> Rich Communication Solution?
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-blue-100 hover:shadow-lg transition-all">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center text-white">
+                <i class="bi bi-badge-ad text-xl"></i>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-gray-700 leading-relaxed">Amplify your brand with your logo, brand name, and colors in messaging app</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-cyan-50 to-white rounded-xl border border-cyan-100 hover:shadow-lg transition-all">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-lg flex items-center justify-center text-white">
+                <i class="bi bi-chat-left-text text-xl"></i>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-gray-700 leading-relaxed">Chat with your customers with text, images, GIFs, audio and video files, documents, and location information</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-indigo-50 to-white rounded-xl border border-indigo-100 hover:shadow-lg transition-all">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-lg flex items-center justify-center text-white">
+                <i class="bi bi-hand-index text-xl"></i>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-gray-700 leading-relaxed">Embedded clickable buttons for quick responses and actions for improved interaction control</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-purple-50 to-white rounded-xl border border-purple-100 hover:shadow-lg transition-all">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center text-white">
+                <i class="bi bi-phone text-xl"></i>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-gray-700 leading-relaxed">Even on Non-RCS enabled phones, you can seamlessly extend your existing SMS with RCS Business Messaging</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-blue-100 hover:shadow-lg transition-all">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center text-white">
+                <i class="bi bi-graph-up text-xl"></i>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-gray-700 leading-relaxed">Track the effectiveness of your messaging and obtain relevant statistics</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-cyan-50 to-white rounded-xl border border-cyan-100 hover:shadow-lg transition-all">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-lg flex items-center justify-center text-white">
+                <i class="bi bi-patch-check text-xl"></i>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-gray-700 leading-relaxed">Customers get trust and assurance by the presence of a checkmark next to the brand name</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-indigo-50 to-white rounded-xl border border-indigo-100 hover:shadow-lg transition-all">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-lg flex items-center justify-center text-white">
+                <i class="bi bi-arrows-fullscreen text-xl"></i>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-gray-700 leading-relaxed">RCS does not have a character limit of 160 characters, allowing you to express yourself more powerfully</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-purple-50 to-white rounded-xl border border-purple-100 hover:shadow-lg transition-all">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center text-white">
+                <i class="bi bi-people text-xl"></i>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-gray-700 leading-relaxed">Enables you to create group chats for answering customer questions and resolving queries</p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 p-6 bg-gradient-to-br from-blue-50 to-white rounded-xl border border-blue-100 hover:shadow-lg transition-all">
+            <div class="flex-shrink-0">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center text-white">
+                <i class="bi bi-card-image text-xl"></i>
+              </div>
+            </div>
+            <div>
+              <p class="text-sm text-gray-700 leading-relaxed">Create rich media carousels to enable customers to browse through your business</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span
+            class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-blue-200/60 shadow-sm"
+          >
+            <i class="bi bi-trophy text-sm"></i>
+            Benefits
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Benefits of <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">RCS Messaging</span> Services
+          </h2>
+          <p class="text-base text-gray-600 max-w-2xl mx-auto">Experience superior engagement and performance</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="group bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-blue-100">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-blue-500/50">
+                <i class="bi bi-globe text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-extrabold text-gray-900 mb-3">Global Reach</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Engage with customers worldwide with direct carrier connections
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-gradient-to-br from-cyan-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-cyan-100">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-cyan-500/50">
+                <i class="bi bi-file-earmark-text text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-extrabold text-gray-900 mb-3">Detailed Reporting</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Detailed reporting with read receipts and click reports
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-gradient-to-br from-indigo-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-indigo-100">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-indigo-500/50">
+                <i class="bi bi-patch-check text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-extrabold text-gray-900 mb-3">Brand Verification</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Improve click-through and response rates by adding brand verification to promotional messaging
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-purple-100">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-purple-500/50">
+                <i class="bi bi-check-circle text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-extrabold text-gray-900 mb-3">No Template Approval</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  No preset message template approval required
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-blue-100">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-blue-500/50">
+                <i class="bi bi-telephone text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-extrabold text-gray-900 mb-3">Call-to-Action</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  VA call-to-action is available at the end of a dialogue session
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-gradient-to-br from-cyan-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-cyan-100">
+            <div class="flex items-start space-x-4">
+              <div class="w-14 h-14 bg-gradient-to-br from-cyan-600 to-cyan-700 rounded-xl flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-cyan-500/50">
+                <i class="bi bi-gift text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-extrabold text-gray-900 mb-3">Promotional Offers</h4>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Attract clients with promotional and discount offers
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-blue-800">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-white/20 shadow-2xl">
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-5 leading-tight">Let's Connect - Let's Reach Out</h2>
+              <p class="text-base text-gray-100/90 leading-relaxed mb-4">Connect with us to learn more about the best communication solution for your business for enhancing your customer engagement.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-end">
+              <a href="contact.html" class="group px-8 py-4 bg-white text-blue-900 font-bold rounded-lg hover:bg-gray-50 transition-all text-center shadow-xl hover:shadow-2xl hover:scale-105 text-sm">
+                <span class="group-hover:scale-105 inline-block transition-transform">Contact Us</span>
+              </a>
+              <a href="contact.html#demo" class="group px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-900 transition-all text-center hover:scale-105 text-sm">
+                <span class="group-hover:scale-105 inline-block transition-transform">Request Demo</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

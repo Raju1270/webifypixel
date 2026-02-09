@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="E-commerce Solutions - Boost your online store with automated messaging and customer engagement tools from Pinnacle Teleservices.">
+    <meta property="og:title" content="E-commerce Solutions - Grow Your Online Store | Pinnacle Teleservices">
+    <meta property="og:description" content="Drive sales and customer loyalty with automated order notifications, abandoned cart recovery, delivery updates, and personalized marketing campaigns.">
+    <meta property="og:type" content="website">
+    <title>E-commerce Solutions - Grow Your Online Store | Pinnacle Teleservices</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'slide-up': 'slideUp 0.8s ease-out',
+              'slide-left': 'slideLeft 0.8s ease-out',
+              'shimmer': 'shimmer 2s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(50px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideLeft: {
+                '0%': { transform: 'translateX(50px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-1000px 0' },
+                '100%': { backgroundPosition: '1000px 0' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+
+      .animate-slide-left {
+        animation: slideLeft 0.8s ease-out;
+      }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900 min-h-screen flex items-center overflow-hidden" id="hero">
+      <!-- Animated Background Orbs -->
+      <div class="absolute inset-0 overflow-hidden opacity-30">
+        <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+        <div class="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 2s"></div>
+        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-orange-600 to-amber-600 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 4s"></div>
+      </div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen py-16 gap-12">
+          <div class="w-full lg:w-7/12 xl:w-6/12">
+            <div class="text-white space-y-6 animate-slide-up">
+              <div class="flex items-center space-x-2 text-gray-400 text-sm mb-2">
+                <a href="index.html" class="hover:text-white transition-colors"><i class="bi bi-house-door"></i> Home</a>
+                <span>/</span>
+                <span class="text-gray-300">E-commerce Solutions</span>
+              </div>
+              <p class="inline-block text-xs md:text-xs font-bold px-3 py-1 bg-orange-500/20 backdrop-blur-sm rounded-full text-orange-300 border border-orange-400/30 uppercase animate-fade-in" data-testid="text-hero-subtitle">E-commerce Solutions</p>
+              <div class="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 leading-[1.1] tracking-tight" data-testid="text-hero-title" style="animation-delay: 0.5s">Grow Your<br /><span class="bg-gradient-to-r from-orange-200 via-amber-300 to-orange-200 bg-clip-text text-transparent animate-shimmer delay-700 bg-[length:200%_100%]">Online Store</span></div>
+              <p class="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl font-light" data-testid="text-hero-description" style="animation-delay: 0.4s">Boost sales and customer loyalty with automated order notifications, abandoned cart recovery, delivery updates, and personalized marketing campaigns.</p>
+              <div class="flex flex-col sm:flex-row gap-4 pt-2" style="animation-delay: 0.6s">
+                <a href="contact.html#demo" class="group inline-flex items-center justify-center px-7 py-3.5 text-sm bg-gradient-to-r from-orange-600 to-amber-700 text-white font-bold rounded-xl hover:from-amber-700 hover:to-orange-800 transition-all duration-300 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 hover:-translate-y-1 hover:scale-105 relative overflow-hidden" data-testid="button-hero-demo">
+                  <span class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
+                  <i class="bi bi-calendar-check mr-2 text-base group-hover:scale-105 transition-transform"></i>
+                  <span>Schedule a Demo</span>
+                </a>
+                <a href="integrations.html" class="inline-flex items-center justify-center px-7 py-3.5 text-sm bg-white/10 backdrop-blur-md border-2 border-white/40 text-white font-bold rounded-xl hover:bg-white hover:text-orange-900 hover:border-white transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl" data-testid="button-hero-sales">
+                  <i class="bi bi-plug mr-2 text-base"></i>
+                  <span>View Integrations</span>
+                </a>
+              </div>
+              <div class="grid grid-cols-3 gap-4 pt-4" style="animation-delay: 0.8s">
+                <div class="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all">
+                  <div class="text-2xl font-black text-orange-300 mb-1">35%</div>
+                  <div class="text-xs text-gray-400">Cart Recovery Rate</div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all">
+                  <div class="text-2xl font-black text-amber-300 mb-1">98%</div>
+                  <div class="text-xs text-gray-400">Delivery Rate</div>
+                </div>
+                <div class="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all">
+                  <div class="text-2xl font-black text-orange-300 mb-1">24/7</div>
+                  <div class="text-xs text-gray-400">Support</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Visual Section -->
+          <div class="lg:w-5/12 xl:w-6/12 animate-slide-left">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-orange-500/30 to-amber-500/30 rounded-2xl blur-3xl"></div>
+              <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 to-slate-900 p-8">
+                <div class="space-y-4">
+                  <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all">
+                    <div class="flex items-center gap-4">
+                      <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center text-white">
+                        <i class="bi bi-cart-check text-2xl"></i>
+                      </div>
+                      <div class="flex-1">
+                        <div class="text-white font-bold mb-1">Order Confirmed</div>
+                        <div class="text-gray-400 text-sm">Instant notifications</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all">
+                    <div class="flex items-center gap-4">
+                      <div class="w-12 h-12 bg-amber-500 rounded-lg flex items-center justify-center text-white">
+                        <i class="bi bi-truck text-2xl"></i>
+                      </div>
+                      <div class="flex-1">
+                        <div class="text-white font-bold mb-1">Out for Delivery</div>
+                        <div class="text-gray-400 text-sm">Real-time tracking</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all">
+                    <div class="flex items-center gap-4">
+                      <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center text-white">
+                        <i class="bi bi-star text-2xl"></i>
+                      </div>
+                      <div class="flex-1">
+                        <div class="text-white font-bold mb-1">Review Request</div>
+                        <div class="text-gray-400 text-sm">Build social proof</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Grow Your Online Store with Smart Communication</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Transform your e-commerce business with Pinnacle's comprehensive messaging solutions. From order confirmations to abandoned cart recovery, we help you engage customers at every stage of their journey.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Our e-commerce solutions integrate seamlessly with Shopify, WooCommerce, Magento, and other major platforms. Set up automated workflows in minutes to increase conversions, reduce cart abandonment, and build lasting customer relationships.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Join thousands of online retailers who trust Pinnacle to deliver millions of transactional and promotional messages every day with 99.9% uptime and real-time delivery tracking.
+            </p>
+          </div>
+          <div>
+            <img src="https://via.placeholder.com/600x400?text=E-commerce+Solutions" alt="E-commerce Solutions" class="rounded-xl shadow-2xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Key Features</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Everything you need to boost your online sales</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-cart-check"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Order Notifications</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Send instant order confirmations, payment receipts, and order status updates via SMS, WhatsApp, or email.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-arrow-repeat"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Cart Recovery</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Recover lost sales with automated abandoned cart reminders sent at optimal times with personalized incentives.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-600 to-orange-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-truck"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Delivery Updates</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Keep customers informed with real-time shipping updates, tracking links, and delivery notifications.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-star"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Review Requests</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Automatically request product reviews and ratings after delivery to build social proof and trust.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-megaphone"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Marketing Campaigns</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Send personalized promotions, flash sales, new product launches, and seasonal offers to segmented audiences.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-amber-600 to-orange-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-person-circle"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Customer Support</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Provide instant support via WhatsApp or SMS with automated responses and seamless handoff to agents.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why E-commerce Brands Choose Pinnacle</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Proven results for online retailers</p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-gradient-to-b from-orange-50 to-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                <i class="bi bi-graph-up-arrow text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-900 mb-3">Increase Conversions</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  Recover up to 30% of abandoned carts and boost repeat purchases with timely, personalized messages.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-b from-amber-50 to-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-amber-600 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                <i class="bi bi-heart text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-900 mb-3">Build Loyalty</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  Keep customers engaged with proactive updates and personalized recommendations that drive lifetime value.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-b from-yellow-50 to-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-yellow-600 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                <i class="bi bi-lightning text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-900 mb-3">Reduce Support Costs</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  Automate common queries with intelligent chatbots and self-service options, reducing support tickets.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-b from-orange-50 to-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 bg-orange-700 rounded-lg flex items-center justify-center text-white flex-shrink-0">
+                <i class="bi bi-speedometer2 text-xl"></i>
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-gray-900 mb-3">Fast Setup</h4>
+                <p class="text-gray-600 leading-relaxed">
+                  Pre-built integrations with major e-commerce platforms mean you can start sending messages in minutes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Integrations -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Supported Platforms</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Works with your favorite e-commerce platform</p>
+        </div>
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center text-white text-2xl mx-auto mb-4">
+              <i class="bi bi-shop"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900">Shopify</h4>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-2xl mx-auto mb-4">
+              <i class="bi bi-wordpress"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900">WooCommerce</h4>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center text-white text-2xl mx-auto mb-4">
+              <i class="bi bi-cart"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900">Magento</h4>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center text-white text-2xl mx-auto mb-4">
+              <i class="bi bi-basket"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900">BigCommerce</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-orange-900 to-orange-800">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Boost Your Sales?</h2>
+              <p class="text-gray-200">Get started with Pinnacle's e-commerce solutions and watch your conversions grow.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-end">
+              <a href="contact.html" class="px-8 py-3 bg-white text-orange-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-center">Contact Us</a>
+              <a href="contact.html#demo" class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-orange-900 transition-colors text-center">Start Free Trial</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

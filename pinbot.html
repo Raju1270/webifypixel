@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PinBot AI - Intelligent chatbot solution powered by AI for automated customer support and engagement.">
+    <meta property="og:title" content="PinBot AI - Intelligent Chatbot Solution | Pinnacle Teleservices">
+    <meta property="og:description" content="Transform customer service with PinBot AI - an intelligent chatbot that provides 24/7 automated support, lead generation, and personalized conversations.">
+    <meta property="og:type" content="website">
+    <title>PinBot AI - Intelligent Chatbot Solution | Pinnacle Teleservices</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
+            fontSize: {
+              'xs': ['0.75rem', { lineHeight: '1rem' }],
+              'sm': ['0.8125rem', { lineHeight: '1.25rem' }],
+              'base': ['0.9375rem', { lineHeight: '1.5rem' }],
+              'lg': ['1.0625rem', { lineHeight: '1.75rem' }],
+              'xl': ['1.1875rem', { lineHeight: '1.75rem' }],
+              '2xl': ['1.4375rem', { lineHeight: '2rem' }],
+              '3xl': ['1.8125rem', { lineHeight: '2.25rem' }],
+              '4xl': ['2.1875rem', { lineHeight: '2.5rem' }],
+              '5xl': ['2.8125rem', { lineHeight: '1' }],
+              '6xl': ['3.125rem', { lineHeight: '1' }],
+              '7xl': ['3.5rem', { lineHeight: '1' }],
+            },
+            letterSpacing: {
+              tighter: '-0.05em',
+              tight: '-0.025em',
+            },
+          }
+        }
+      }
+    </script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #3b82f6, #2563eb);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #2563eb, #1d4ed8);
+      }
+
+      /* Animations */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+      }
+
+      @keyframes slide-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .animate-slide-up {
+        animation: slide-up 0.6s ease-out;
+      }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen flex items-center overflow-hidden" id="hero">
+      <!-- Animated Background Orbs -->
+      <div class="absolute inset-0 overflow-hidden opacity-30">
+        <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+        <div class="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 2s"></div>
+        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 4s"></div>
+      </div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen py-16 gap-12">
+          <div class="w-full lg:w-7/12 xl:w-6/12">
+            <div class="text-white space-y-6 animate-slide-up">
+              <div class="flex items-center space-x-2 text-gray-400 text-sm mb-2">
+                <a href="index.html" class="hover:text-white transition-colors"><i class="bi bi-house-door"></i> Home</a>
+                <span>/</span>
+                <span class="text-gray-300">PinBot AI</span>
+              </div>
+              <p class="inline-block text-xs md:text-xs font-bold px-3 py-1 bg-purple-500/20 backdrop-blur-sm rounded-full text-purple-200 border border-purple-400/30 uppercase animate-fade-in" data-testid="text-hero-subtitle">AI-Powered ChatBot</p>
+              <div class="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 leading-[1.1] tracking-tight" data-testid="text-hero-title" style="animation-delay: 0.5s">Harness The<br /><span class="bg-gradient-to-r from-pink-200 via-purple-300 to-pink-200 bg-clip-text text-transparent animate-shimmer delay-700 bg-[length:200%_100%]">Power of AI</span></div>
+              <p class="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl font-light" data-testid="text-hero-description" style="animation-delay: 0.4s">Pinnacle's ChatBot platform "PinBot" empowers your organization to communicate in a very personal approach and automate customer interactions to resolve the customers' problems in real-time.</p>
+              <div class="flex flex-col sm:flex-row gap-4 pt-2" style="animation-delay: 0.6s">
+                <a href="contact.html#demo" class="group inline-flex items-center justify-center px-7 py-3.5 text-sm bg-gradient-to-r from-purple-600 to-pink-700 text-white font-bold rounded-xl hover:from-pink-700 hover:to-purple-800 transition-all duration-300 shadow-2xl shadow-purple-500/40 hover:shadow-pink-500/60 hover:-translate-y-1 hover:scale-105 relative overflow-hidden" data-testid="button-hero-demo">
+                  <span class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
+                  <i class="bi bi-calendar-check mr-2 text-base group-hover:scale-105 transition-transform"></i>
+                  <span>Schedule a Demo</span>
+                </a>
+                <a href="contact.html" class="inline-flex items-center justify-center px-7 py-3.5 text-sm bg-white/10 backdrop-blur-md border-2 border-white/40 text-white font-bold rounded-xl hover:bg-white hover:text-purple-900 hover:border-white transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl" data-testid="button-hero-sales">
+                  <i class="bi bi-telephone mr-2 text-base"></i>
+                  <span>Talk to Sales</span>
+                </a>
+              </div>
+              <div class="flex items-center gap-4 p-2 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 w-fit hover:bg-white/10 transition-all duration-300 group" style="animation-delay: 0.8s">
+                <div class="w-64 h-fit bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+                  <img src="newassests/home/whatsapp-meta.png" alt="Meta Premier Partner" class="w-64 h-fit" data-testid="img-meta-partner" />
+                </div>
+                <div>
+                  <p class="text-xs font-bold text-white">Premier Partner</p>
+                  <p class="text-[10px] text-gray-400 font-medium">of Meta Platform</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video Section -->
+          <div class="lg:w-5/12 xl:w-6/12 animate-slide-left">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-2xl blur-3xl"></div>
+              <div class="relative overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-slate-800 to-slate-900">
+                <video class="w-full h-full object-cover" autoplay muted loop playsinline poster="assets/images/video-poster.jpg">
+                  <source src="newassests/home/hero_section_video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="max-w-4xl mx-auto text-center animate-slide-up">
+          <p class="text-base text-gray-700 leading-relaxed mb-6">
+            Our technologically advanced platform interprets consumer input or behaviour and generates feedback in the form of text messages, images, GIFs, audio, or videos. Save up to 35% of the service operation cost with our simple UX design.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Partner Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-purple-200/60 shadow-sm">
+            <i class="bi bi-handshake text-sm"></i>
+            Partner Benefits
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Why Partner with <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">PinBot?</span>
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden border border-gray-100">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-purple-500/50">
+                <i class="bi bi-rocket-takeoff"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Get Started in Minutes</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                We assign an account manager to work hand in hand to ensure you offer the best possible bot
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden border border-gray-100">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-pink-500/50">
+                <i class="bi bi-stars"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Rich Features</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                We empower partners with all possible features for clients, with no restrictions
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden border border-gray-100">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-purple-500/50">
+                <i class="bi bi-translate"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Multilingual Messaging</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Message in multiple languages to reach anyone, on any phone, anywhere in the world
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden border border-gray-100">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-pink-600 to-purple-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-pink-500/50">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">24×7 Support</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Create live chats to provide support and speedy answers round the clock
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PinBot is Becoming Smart Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-purple-200/60 shadow-sm">
+            <i class="bi bi-lightbulb text-sm"></i>
+            Smart Capabilities
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            PinBot is Becoming <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Smart</span>
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="group bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-purple-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
+              <i class="bi bi-chat-dots"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Live Chat</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Customers prefer live responses rather than just another means of communication</p>
+          </div>
+          <div class="group bg-gradient-to-br from-pink-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-pink-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center text-white text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
+              <i class="bi bi-headset"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Customer Support</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Our Bots are manning customer helpdesks efficiently</p>
+          </div>
+          <div class="group bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-purple-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center text-white text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
+              <i class="bi bi-building"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Domain Understanding</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Pre-feed data to answer queries from your specific industry</p>
+          </div>
+          <div class="group bg-gradient-to-br from-pink-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-pink-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg flex items-center justify-center text-white text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
+              <i class="bi bi-reply-all"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Auto Responses</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Intelligently analyzes customer inputs and replies with pre-set responses</p>
+          </div>
+          <div class="group bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-purple-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
+              <i class="bi bi-bar-chart"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Measure Effectiveness</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Analytics dashboard with bot conversation time, containment rate metrics</p>
+          </div>
+          <div class="group bg-gradient-to-br from-pink-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-pink-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center text-white text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
+              <i class="bi bi-emoji-smile"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Add Personality</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Create a custom avatar for your bot to match your brand</p>
+          </div>
+          <div class="group bg-gradient-to-br from-purple-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-purple-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center text-white text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
+              <i class="bi bi-person-heart"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Personalize with AI</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Access customer history to personalize responses and capture sentiment</p>
+          </div>
+          <div class="group bg-gradient-to-br from-pink-50 to-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-pink-100">
+            <div class="w-14 h-14 bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg flex items-center justify-center text-white text-xl mb-4 group-hover:scale-110 transition-transform shadow-md">
+              <i class="bi bi-person-check"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-gray-900 mb-2">Human Support</h3>
+            <p class="text-sm text-gray-600 leading-relaxed">Bot smoothly handovers to live agent when needed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-purple-200/60 shadow-sm">
+            <i class="bi bi-trophy text-sm"></i>
+            Why Choose Us
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Why Choose <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Pinnacle PinBot Services?</span>
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-ui-checks text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Button & NLP Response</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Capture responses through buttons and natural language processing</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-file-earmark-play text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Rich Media Sharing</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Share video, audio, image, and GIFs with your clients</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-plugin text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Webhook Integration</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Dynamic webhook integration into your custom applications</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-cursor text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Drag & Drop Editor</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Create chatbots easily with intuitive drag and drop interface</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-translate text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Multi-Lingual Campaigns</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Connect with audience using multi-lingual campaigns</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-graph-up text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Detailed Reports</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Analyze customer behaviour and response with detailed reports</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-boxes text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Multi-Channel Integration</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Integrate PinBot with website and many more channels</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-shield-check text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Reliable Technology</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Achieve high ROI with proven reliable technology</p>
+              </div>
+            </div>
+          </div>
+          <div class="group bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all hover:-translate-y-2 border border-gray-100">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg flex items-center justify-center text-white flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i class="bi bi-infinity text-xl"></i>
+              </div>
+              <div>
+                <h3 class="text-base font-extrabold text-gray-900 mb-2">Endless Possibilities</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">Create the best user experience with unlimited possibilities</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-purple-200/60 shadow-sm">
+            <i class="bi bi-gift text-sm"></i>
+            Key Benefits
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Benefits for <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">You</span>
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden border border-gray-100">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-purple-500/50">
+                <i class="bi bi-clock-history"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">24×7 Availability</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Be available for your clients round the clock
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden border border-gray-100">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-pink-500/50">
+                <i class="bi bi-people"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Bridge Communication Gap</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Bridge the gap between you and your audience
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden border border-gray-100">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-purple-500/50">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Larger Audience</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Respond to a larger audience with bot configuration
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden border border-gray-100">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-pink-600 to-purple-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-pink-500/50">
+                <i class="bi bi-piggy-bank"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Save Time & Money</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Automated response and support flows save time and money
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden border border-gray-100">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-purple-500/50">
+                <i class="bi bi-person-plus"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">Genuine Leads</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Generate genuine leads as chats are initiated by clients
+              </p>
+            </div>
+          </div>
+          <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-3 relative overflow-hidden border border-gray-100">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-50 to-transparent rounded-full -mr-16 -mt-16 opacity-50"></div>
+            <div class="relative">
+              <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-transform shadow-lg group-hover:shadow-pink-500/50">
+                <i class="bi bi-plug"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-4">API Integration</h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Integration helps configuration with your applications
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-purple-900 to-purple-800">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="bg-white/10 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-white/20 shadow-2xl">
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div>
+              <h2 class="text-2xl md:text-3xl lg:text-3xl font-extrabold text-white mb-5 leading-tight">Let's Connect - Let's Reach Out</h2>
+              <p class="text-base text-gray-100/90 leading-relaxed">Contact us to learn more about the best communication solution for your business for enhancing your customer engagement.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-end">
+              <a href="contact.html" class="group px-8 py-4 bg-white text-purple-900 font-bold rounded-lg hover:bg-gray-50 transition-all text-center shadow-xl hover:shadow-2xl hover:scale-105 text-sm">
+                <span class="group-hover:scale-105 inline-block transition-transform">Contact Us</span>
+              </a>
+              <a href="contact.html#demo" class="group px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-purple-900 transition-all text-center hover:scale-105 text-sm">
+                <span class="group-hover:scale-105 inline-block transition-transform">Try PinBot</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

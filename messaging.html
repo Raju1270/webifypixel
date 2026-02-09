@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pinnacle Teleservices Messaging Solutions - Reliable, scalable SMS, OTP, and promotional messaging for enterprises.">
+    <meta property="og:title" content="Enterprise Messaging Solutions - SMS, OTP, Promotional | Pinnacle Teleservices">
+    <meta property="og:description" content="Send transactional, OTP, and promotional messages securely and at scale with Pinnacle's robust messaging platform.">
+    <meta property="og:type" content="website">
+    <title>Enterprise Messaging Solutions - SMS, OTP, Promotional | Pinnacle Teleservices</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0066FF",
+              secondary: "#00D4FF",
+            },
+            fontFamily: {
+              sans: ["Inter", "-apple-system", "BlinkMacSystemFont", "system-ui", "sans-serif"],
+              display: ["Poppins", "system-ui", "sans-serif"],
+            },
+            fontSize: {
+              xs: ["0.75rem", { lineHeight: "1.125rem" }],
+              sm: ["0.875rem", { lineHeight: "1.375rem" }],
+              base: ["0.9375rem", { lineHeight: "1.625rem" }],
+              lg: ["1.0625rem", { lineHeight: "1.75rem" }],
+              xl: ["1.125rem", { lineHeight: "1.875rem" }],
+              "2xl": ["1.375rem", { lineHeight: "2rem" }],
+              "3xl": ["1.75rem", { lineHeight: "2.25rem" }],
+              "4xl": ["2rem", { lineHeight: "2.5rem" }],
+              "5xl": ["2.5rem", { lineHeight: "1.15" }],
+              "6xl": ["3rem", { lineHeight: "1.1" }],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'slide-up': 'slideUp 0.8s ease-out',
+              'slide-left': 'slideLeft 0.8s ease-out',
+              'slide-right': 'slideRight 0.8s ease-out',
+              'scale-in': 'scaleIn 0.6s ease-out',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(50px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideLeft: {
+                '0%': { transform: 'translateX(50px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              slideRight: {
+                '0%': { transform: 'translateX(-50px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              scaleIn: {
+                '0%': { transform: 'scale(0.9)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+      [x-cloak] { display: none !important; }
+      
+      * {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 0.9375rem;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      .glass {
+        backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #3b82f6, #2563eb);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #2563eb, #1d4ed8);
+      }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 min-h-screen flex items-center overflow-hidden">
+      <!-- Animated Background Orbs -->
+      <div class="absolute inset-0 overflow-hidden opacity-30">
+        <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+        <div class="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 2s"></div>
+        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 4s"></div>
+      </div>
+
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen py-16 gap-12">
+          <div class="w-full lg:w-7/12 xl:w-6/12">
+            <div class="text-white space-y-6 animate-slide-up">
+              <div class="flex items-center space-x-2 text-gray-400 text-sm mb-2">
+                <a href="index.html" class="hover:text-white transition-colors"><i class="bi bi-house-door"></i> Home</a>
+                <span>/</span>
+                <span class="text-gray-300">Messaging Solutions</span>
+              </div>
+
+              <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-white">Messaging</span> and <span class="text-cyan-400">SMS Services</span>
+              </h1>
+              
+              <p class="text-base md:text-lg lg:text-xl text-blue-100 leading-relaxed font-medium">
+                We have the power to deliver your message worldwide.
+              </p>
+
+              <p class="text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed">
+                Create seamless communication through our reliable, scalable, and robust messaging channel using our platform or API. Our proven technology helps businesses deliver transactional, OTP and promotional messages to the consumers, securely and on time.
+              </p>
+
+              <div class="flex flex-col sm:flex-row gap-4 pt-6">
+                <a href="#demo" class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 text-white text-sm font-bold rounded-xl hover:from-blue-700 hover:via-blue-800 hover:to-cyan-700 transition-all shadow-lg shadow-blue-500/40 hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105 text-center overflow-hidden">
+                  <span class="relative z-10 flex items-center justify-center gap-2">
+                    Get Started
+                    <i class="bi bi-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                  </span>
+                  <div class="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </a>
+                <a href="#features" class="px-8 py-4 bg-white/10 backdrop-blur-md text-white text-sm font-semibold rounded-xl hover:bg-white/20 transition-all border border-white/30 text-center hover:border-white/50 flex items-center justify-center gap-2">
+                  Learn More
+                  <i class="bi bi-arrow-down"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Section -->
+          <div class="lg:w-5/12 xl:w-6/12 animate-slide-left">
+            <div class="relative group">
+              <div class="absolute -inset-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 rounded-3xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-500"></div>
+              <img src="newassests/home/all_product.png" alt="Messaging Services" class="relative w-full h-auto rounded-2xl hover:shadow-blue-500/30 transition-shadow duration-300">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Secure SMS Service Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2 space-y-6 animate-slide-right">
+            <span class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-700 rounded-full text-xs font-semibold tracking-wider uppercase border border-blue-200/60 shadow-sm">
+              <i class="bi bi-shield-check-fill text-sm"></i>
+              Enterprise-Grade Availability
+            </span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              Secure <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-800">SMS Service</span>
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+              Enterprise-class platforms provide a robust, cross-carrier service that seamlessly handles the growing A2P messaging streams. It allows coping with today's users' complex and constantly evolving needs globally. In addition, the infrastructure helps you with the best reliability, security and performance.
+            </p>
+            <div class="space-y-4 pt-4">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="bi bi-shield-check text-white   text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-1">99.99% Service Uptime</h3>
+                  <p class="text-gray-600">Round-the-clock availability for your critical messages</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i class="bi bi-lightning-charge text-white text-xl"></i>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-1">24x7 Accessible Solution</h3>
+                  <p class="text-gray-600">Manage limitless messaging to reach your consumers globally</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 animate-slide-left">
+            <div class="relative group">
+              <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-500"></div>
+              <img src="newassests/home/verify.png" alt="Secure SMS Service" class="relative w-full h-auto rounded-2xl  hover:shadow-blue-500/20 transition-shadow duration-300">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transactional SMS Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+          <div class="lg:w-1/2 space-y-6 animate-slide-left">
+            <span class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-50 to-pink-50 text-purple-700 rounded-full text-xs font-semibold tracking-wider uppercase border border-purple-200/60 shadow-sm">
+              <i class="bi bi-chat-dots-fill text-sm"></i>
+              Transactional SMS Service
+            </span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">99.99%</span> Service Uptime
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+              Improve the ROI with 99.97% delivery for Transactional / OTP messaging with our technologically advanced infrastructure and APIs that are developed reliably to serve with 99.99% system uptime. This enables your enterprise to manage limitless messaging to reach your consumer globally.
+            </p>
+            <ul class="space-y-3.5">
+              <li class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-emerald-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">99.97% delivery rate for Transactional/OTP messages</span>
+              </li>
+              <li class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-emerald-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Real-time intelligent routing with redundant connectivity</span>
+              </li>
+              <li class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-emerald-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Technologically advanced infrastructure</span>
+              </li>
+              <li class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-emerald-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Reach consumers globally</span>
+              </li>
+            </ul>
+          </div>
+          <div class="lg:w-1/2 animate-slide-right">
+            <div class="relative group">
+              <div class="absolute -inset-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-500"></div>
+              <img src="newassests/home/industry_man.png" alt="Transactional SMS Service" class="relative w-full h-auto rounded-2xl hover:shadow-purple-500/20 transition-shadow duration-300">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Messaging Platforms Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden" id="features">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="text-center mb-16 animate-slide-up">
+          <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-5 tracking-wider uppercase border border-blue-200/60 shadow-sm mx-auto">
+            <i class="bi bi-grid-3x3-gap-fill text-sm"></i>
+            Our Platforms
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Messaging and <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">SMS Services</span> Platforms
+          </h2>
+          <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Choose from our comprehensive suite of messaging solutions tailored to your business needs
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <!-- Bulk SMS -->
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-blue-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-xl flex items-center justify-center mb-6 text-white text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-blue-500/50 relative z-10">
+              <i class="bi bi-send"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors relative z-10">Bulk SMS</h3>
+            <p class="text-sm text-gray-600 leading-relaxed relative z-10">
+              Trigger campaigns to millions of contacts in one go with real-time information, alerts, and notifications in a cost-effective, timely, secure, and efficient approach.
+            </p>
+          </div>
+
+          <!-- SMS API -->
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-purple-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden" style="animation-delay: 0.1s">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 rounded-xl flex items-center justify-center mb-6 text-white text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-purple-500/50 relative z-10">
+              <i class="bi bi-code-square"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors relative z-10">SMS API</h3>
+            <p class="text-sm text-gray-600 leading-relaxed relative z-10">
+              Streamline A2P communication, globally with our highly secured messaging API that eases SMS implementation across your entire enterprise. Manage the bouquet of requirement with GET and POST API.
+            </p>
+          </div>
+
+          <!-- 2-Way Messaging -->
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-green-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden" style="animation-delay: 0.2s">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="w-16 h-16 bg-gradient-to-br from-green-500 via-green-600 to-green-700 rounded-xl flex items-center justify-center mb-6 text-white text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-green-500/50 relative z-10">
+              <i class="bi bi-arrow-left-right"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-green-600 transition-colors relative z-10">2-Way Messaging</h3>
+            <p class="text-sm text-gray-600 leading-relaxed relative z-10">
+              Enable 2-way messaging using Longcode and Shortcode by setting unlimited keywords to your Virtual Mobile Number to increase and improve engagement with users.
+            </p>
+          </div>
+
+          <!-- MMS Messaging -->
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 p-8 group border border-gray-100 hover:border-orange-300 hover:-translate-y-3 animate-scale-in relative overflow-hidden" style="animation-delay: 0.3s">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 rounded-xl flex items-center justify-center mb-6 text-white text-3xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg shadow-orange-500/50 relative z-10">
+              <i class="bi bi-file-image"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors relative z-10">MMS Messaging</h3>
+            <p class="text-sm text-gray-600 leading-relaxed relative z-10">
+              Go beyond simple messaging to communicate more with documents, images, videos, and URLs to enhance your campaigns' impact on your clients and collect their responses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Email to SMS Gateway Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2 animate-slide-right">
+            <div class="relative group">
+              <div class="absolute -inset-4 bg-gradient-to-r from-indigo-500 to-violet-500 rounded-3xl opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-500"></div>
+              <img src="newassests/home/premier-partner-bg-2-scaled.jpg" alt="Email to SMS Gateway" class="relative w-full h-auto rounded-2xl hover:shadow-indigo-500/20 transition-shadow duration-300">
+            </div>
+          </div>
+          <div class="lg:w-1/2 space-y-6 animate-slide-left">
+            <span class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-50 to-violet-50 text-indigo-700 rounded-full text-xs font-semibold tracking-wider uppercase border border-indigo-200/60 shadow-sm">
+              <i class="bi bi-envelope-at-fill text-sm"></i>
+              Email to SMS Gateway
+            </span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              Send <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Email to SMS</span> Gateway
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+              Our email to SMS gateway service is designed to benefit your business with the ability to send Emails as SMS text messages.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              <div class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-indigo-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Submissions via HTTPS Web, API's, FTP</span>
+              </div>
+              <div class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-indigo-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">High throughput with Encrypted Security</span>
+              </div>
+              <div class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-indigo-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">OTP Validation</span>
+              </div>
+              <div class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-indigo-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Real-time Delivery</span>
+              </div>
+              <div class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-indigo-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Online spam filtering</span>
+              </div>
+              <div class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-indigo-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Supports large content</span>
+              </div>
+              <div class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-indigo-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Expedient Analytics and Dashboards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Pinnacle Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 relative overflow-hidden">
+      <!-- Decorative Elements -->
+      <div class="absolute inset-0 overflow-hidden opacity-20">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+        <div class="absolute top-1/2 right-0 w-96 h-96 bg-cyan-300 rounded-full filter blur-3xl"></div>
+        <div class="absolute -bottom-24 left-1/3 w-96 h-96 bg-blue-300 rounded-full filter blur-3xl"></div>
+      </div>
+
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="text-center mb-16 animate-slide-up">
+          <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-white/20 backdrop-blur-md text-white rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-white/30 shadow-lg mx-auto">
+            <i class="bi bi-star-fill text-sm"></i>
+            Why Choose Us
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 leading-tight">
+            Why Top Leading Brands Choose <span class="text-cyan-300">Pinnacle</span>?
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/25 hover:border-white/40 transition-all duration-300 hover:scale-105 group">
+            <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all">
+              <i class="bi bi-server text-2xl text-white"></i>
+            </div>
+            <p class="text-white text-sm leading-relaxed">Robust platform with highly scalable infrastructure</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/25 hover:border-white/40 transition-all duration-300 hover:scale-105 group">
+            <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all">
+              <i class="bi bi-graph-up text-2xl text-white"></i>
+            </div>
+            <p class="text-white text-sm leading-relaxed">Real-time reporting with precise delivery status, click report, and download options</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/25 hover:border-white/40 transition-all duration-300 hover:scale-105 group">
+            <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all">
+              <i class="bi bi-check-circle text-2xl text-white"></i>
+            </div>
+            <p class="text-white text-sm leading-relaxed">99.97% delivery rate for Transactional or OTP messages</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/25 hover:border-white/40 transition-all duration-300 hover:scale-105 group">
+            <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all">
+              <i class="bi bi-clock text-2xl text-white"></i>
+            </div>
+            <p class="text-white text-sm leading-relaxed">99.99% service uptime</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/25 hover:border-white/40 transition-all duration-300 hover:scale-105 group">
+            <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all">
+              <i class="bi bi-diagram-3 text-2xl text-white"></i>
+            </div>
+            <p class="text-white text-sm leading-relaxed">Real-time intelligent routing with redundant connectivity</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/25 hover:border-white/40 transition-all duration-300 hover:scale-105 group">
+            <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all">
+              <i class="bi bi-translate text-2xl text-white"></i>
+            </div>
+            <p class="text-white text-sm leading-relaxed">Supports Unicode, Flash, and more features in SMS</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/25 hover:border-white/40 transition-all duration-300 hover:scale-105 group">
+            <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all">
+              <i class="bi bi-infinity text-2xl text-white"></i>
+            </div>
+            <p class="text-white text-sm leading-relaxed">Supports Unlimited Keywords in 2-way messaging</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/25 hover:border-white/40 transition-all duration-300 hover:scale-105 group">
+            <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all">
+              <i class="bi bi-people text-2xl text-white"></i>
+            </div>
+            <p class="text-white text-sm leading-relaxed">Engage users with Surveys, Feedback forms, Coupons, Tickets, Vouchers, Barcodes, or Web pages</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/25 hover:border-white/40 transition-all duration-300 hover:scale-105 group">
+            <div class="w-14 h-14 bg-white/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-white/30 transition-all">
+              <i class="bi bi-file-richtext text-2xl text-white"></i>
+            </div>
+            <p class="text-white text-sm leading-relaxed">Empower campaigns to go beyond 160 characters with MMS messaging</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Different Messaging Services Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16 animate-slide-up">
+          <span class="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-bold mb-6 tracking-wider uppercase border border-blue-200/60 shadow-sm mx-auto">
+            <i class="bi bi-chat-quote-fill text-sm"></i>
+            Messaging Types
+          </span>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+            Different <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Messaging Services</span> with Pinnacle
+          </h2>
+          <p class="text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Overview, of how your different messages will look at the client end
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          <!-- Transactional/OTP Messaging -->
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 border border-gray-100 hover:border-blue-200 transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="flex items-start gap-5 mb-4 relative z-10">
+              <div class="w-14 h-14 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="bi bi-shield-lock text-white text-2xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">Transactional / OTP Messaging</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Send transactional SMS to your registered users, such as information, OTPs, and notifications. Transactional/OTP messages are delivered to both DND & Non-DND users.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Promotional Messaging -->
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 border border-gray-100 hover:border-green-200 transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-green-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="flex items-start gap-5 mb-4 relative z-10">
+              <div class="w-14 h-14 bg-gradient-to-br from-green-500 via-green-600 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-green-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="bi bi-megaphone text-white text-2xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">Promotional Messaging</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  This is a compliant service to promote or advertise your product, brand, or service to your clients about product promotions, offers and discounts.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Flash Messaging -->
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 border border-gray-100 hover:border-purple-200 transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="flex items-start gap-5 mb-4 relative z-10">
+              <div class="w-14 h-14 bg-gradient-to-br from-purple-500 via-purple-600 to-purple-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="bi bi-lightning text-white text-2xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">Flash Messaging</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Share information with your client that appears on their mobile screen right away without requiring the recipient to save (exceptional) or access them.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Messaging -->
+          <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl p-8 border border-gray-100 hover:border-orange-200 transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-orange-50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="flex items-start gap-5 mb-4 relative z-10">
+              <div class="w-14 h-14 bg-gradient-to-br from-orange-500 via-orange-600 to-orange-700 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-orange-500/30 group-hover:scale-110 transition-transform duration-300">
+                <i class="bi bi-file-earmark-richtext text-white text-2xl"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors">Content Messaging</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Do more with MMS, go beyond 160 character limit and enhance brand messaging with images, documents, and audio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2 animate-slide-right">
+            <div class="relative group">
+              <div class="absolute -inset-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-3xl opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-500"></div>
+              <img src="newassests/home/whatsapp-meta.png" alt="Benefits of SMS Service" class="relative w-full h-auto rounded-2xl hover:shadow-green-500/20 transition-shadow duration-300">
+            </div>
+          </div>
+          <div class="lg:w-1/2 space-y-6 animate-slide-left">
+            <span class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-emerald-50 to-green-50 text-emerald-700 rounded-full text-xs font-semibold tracking-wider uppercase border border-emerald-200/60 shadow-sm">
+              <i class="bi bi-star-fill text-sm"></i>
+              Benefits
+            </span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              Benefits of <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">SMS Service</span> for Business
+            </h2>
+            <ul class="space-y-3.5">
+              <li class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-emerald-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Cost-effective and user-friendly platform</span>
+              </li>
+              <li class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-emerald-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Increased brand recognition, sales, and promotion</span>
+              </li>
+              <li class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-emerald-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">High ROI with Platform SLA Guaranteed 99.9%</span>
+              </li>
+              <li class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-emerald-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Highly secured with SSL encrypted system</span>
+              </li>
+              <li class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-emerald-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Developer friendly with Rich API Documentation</span>
+              </li>
+              <li class="flex items-start gap-3 group">
+                <i class="bi bi-check-circle-fill text-emerald-500 text-lg flex-shrink-0 mt-0.5 group-hover:scale-125 transition-transform"></i>
+                <span class="text-sm text-gray-700 leading-relaxed">Reseller ready for your enterprise</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 lg:py-24 bg-gradient-to-b from-white to-gray-50" id="demo">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2 animate-slide-right">
+            <div class="relative group">
+              <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl opacity-10 blur-2xl group-hover:opacity-20 transition-opacity duration-500"></div>
+              <img src="newassests/home/lets_reach_out.png" alt="Let's Connect" class="relative w-full h-auto rounded-2xl hover:shadow-blue-500/20 transition-shadow duration-300">
+            </div>
+          </div>
+          <div class="lg:w-1/2 space-y-6 animate-slide-left">
+            <span class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-cyan-50 text-blue-700 rounded-full text-xs font-semibold tracking-wider uppercase border border-blue-200/60 shadow-sm">
+              <i class="bi bi-chat-heart-fill text-sm"></i>
+              Let's Reach Out
+            </span>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Connect</span> with us
+            </h2>
+            <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+              Contact us to learn more about the best communication solution for your business for enhancing your customer engagement.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 pt-6">
+              <a href="contact.html" class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600 text-white text-sm font-bold rounded-xl hover:from-blue-700 hover:via-blue-800 hover:to-cyan-700 transition-all shadow-lg shadow-blue-500/40 hover:shadow-2xl hover:shadow-blue-500/50 hover:scale-105 text-center overflow-hidden">
+                <span class="relative z-10 flex items-center justify-center gap-2">
+                  Contact Sales
+                  <i class="bi bi-envelope-fill"></i>
+                </span>
+              </a>
+              <a href="tel:+917798353535" class="px-8 py-4 bg-white border-2 border-blue-600 text-blue-600 text-sm font-bold rounded-xl hover:bg-blue-50 hover:border-blue-700 transition-all text-center flex items-center justify-center gap-2 shadow-sm hover:shadow-md">
+                <i class="bi bi-telephone-fill"></i>
+                Call Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Back to Top Button -->
+    <button
+      class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-700 text-white rounded-full shadow-xl hover:shadow-2xl hover:from-blue-700 hover:to-blue-800 transition-all opacity-0 invisible hover:scale-110 z-50 group"
+      id="backToTop"
+      aria-label="Back to top"
+      x-data="{ show: false }"
+      @scroll.window="show = window.pageYOffset > 300"
+      x-show="show"
+      x-transition
+      @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      <i class="bi bi-arrow-up text-xl group-hover:scale-110 transition-transform" aria-hidden="true"></i>
+    </button>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

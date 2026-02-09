@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Integrations - Connect Pinnacle Teleservices with your favorite tools and platforms for seamless workflows.">
+    <meta property="og:title" content="Integrations - Connect with Your Favorite Tools | Pinnacle Teleservices">
+    <meta property="og:description" content="Integrate Pinnacle with CRMs, e-commerce platforms, helpdesks, and more. Pre-built integrations and custom connections available.">
+    <meta property="og:type" content="website">
+    <title>Integrations - Connect with Your Favorite Tools | Pinnacle Teleservices</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Poppins', 'sans-serif'],
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'slide-up': 'slideUp 0.8s ease-out',
+              'slide-left': 'slideLeft 0.8s ease-out',
+              'shimmer': 'shimmer 2s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(50px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slideLeft: {
+                '0%': { transform: 'translateX(50px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              shimmer: {
+                '0%': { backgroundPosition: '-1000px 0' },
+                '100%': { backgroundPosition: '1000px 0' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .animate-slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+
+      .animate-slide-left {
+        animation: slideLeft 0.8s ease-out;
+      }
+    </style>
+</head>
+<body>
+    <!-- Navbar Placeholder -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 min-h-screen flex items-center overflow-hidden" id="hero">
+      <!-- Animated Background Orbs -->
+      <div class="absolute inset-0 overflow-hidden opacity-30">
+        <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
+        <div class="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 2s"></div>
+        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 4s"></div>
+      </div>
+      <!-- Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen py-16 gap-12">
+          <div class="w-full lg:w-7/12 xl:w-6/12">
+            <div class="text-white space-y-6 animate-slide-up">
+              <div class="flex items-center space-x-2 text-gray-400 text-sm mb-2">
+                <a href="index.html" class="hover:text-white transition-colors"><i class="bi bi-house-door"></i> Home</a>
+                <span>/</span>
+                <span class="text-gray-300">Integrations</span>
+              </div>
+              <p class="inline-block text-xs md:text-xs font-bold px-3 py-1 bg-cyan-500/20 backdrop-blur-sm rounded-full text-cyan-300 border border-cyan-400/30 uppercase animate-fade-in" data-testid="text-hero-subtitle">Seamless Integrations</p>
+              <div class="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 leading-[1.1] tracking-tight" data-testid="text-hero-title" style="animation-delay: 0.5s">Connect with<br /><span class="bg-gradient-to-r from-cyan-200 via-blue-300 to-cyan-200 bg-clip-text text-transparent animate-shimmer delay-700 bg-[length:200%_100%]">Your Favorite Tools</span></div>
+              <p class="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl font-light" data-testid="text-hero-description" style="animation-delay: 0.4s">Integrate Pinnacle with your CRM, e-commerce platform, helpdesk, and more. Pre-built connectors and powerful APIs for seamless workflows.</p>
+              <div class="flex flex-col sm:flex-row gap-4 pt-2" style="animation-delay: 0.6s">
+                <a href="contact.html#demo" class="group inline-flex items-center justify-center px-7 py-3.5 text-sm bg-gradient-to-r from-cyan-600 to-blue-700 text-white font-bold rounded-xl hover:from-blue-700 hover:to-cyan-800 transition-all duration-300 shadow-2xl shadow-cyan-500/40 hover:shadow-cyan-500/60 hover:-translate-y-1 hover:scale-105 relative overflow-hidden" data-testid="button-hero-demo">
+                  <span class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></span>
+                  <i class="bi bi-calendar-check mr-2 text-base group-hover:scale-105 transition-transform"></i>
+                  <span>Schedule a Demo</span>
+                </a>
+                <a href="developers.html" class="inline-flex items-center justify-center px-7 py-3.5 text-sm bg-white/10 backdrop-blur-md border-2 border-white/40 text-white font-bold rounded-xl hover:bg-white hover:text-cyan-900 hover:border-white transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl" data-testid="button-hero-sales">
+                  <i class="bi bi-code-slash mr-2 text-base"></i>
+                  <span>View API Docs</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Video Section -->
+          <div class="lg:w-5/12 xl:w-6/12 animate-slide-left">
+            <div class="relative">
+              <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/30 to-blue-500/30 rounded-2xl blur-3xl"></div>
+              <div class="relative overflow-hidden rounded-xl aspect-video bg-gradient-to-br from-slate-800 to-slate-900">
+                <div class="w-full h-full flex items-center justify-center">
+                  <div class="grid grid-cols-3 gap-4 p-8">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center hover:scale-110 transition-transform">
+                      <i class="bi bi-shop text-4xl text-cyan-400"></i>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center hover:scale-110 transition-transform">
+                      <i class="bi bi-person-workspace text-4xl text-blue-400"></i>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center hover:scale-110 transition-transform">
+                      <i class="bi bi-clipboard-data text-4xl text-cyan-400"></i>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center hover:scale-110 transition-transform">
+                      <i class="bi bi-wordpress text-4xl text-blue-400"></i>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center hover:scale-110 transition-transform">
+                      <i class="bi bi-lightning text-4xl text-cyan-400"></i>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center justify-center hover:scale-110 transition-transform">
+                      <i class="bi bi-slack text-4xl text-blue-400"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Connect with Your Favorite Tools</h2>
+            <p class="text-gray-600 leading-relaxed">
+              Pinnacle Teleservices integrates seamlessly with the tools and platforms you already use. Connect your CRM, e-commerce store, helpdesk, marketing automation, and more to create powerful automated workflows.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Our pre-built integrations make it easy to sync data, trigger messages, and automate communication across your entire tech stack. No coding required for most integrations - get connected in minutes.
+            </p>
+            <p class="text-gray-600 leading-relaxed">
+              Need a custom integration? Use our flexible APIs and webhooks to connect with any system, or work with our integration team to build custom connectors tailored to your needs.
+            </p>
+          </div>
+          <div>
+            <img src="https://via.placeholder.com/600x400?text=Integrations" alt="Integrations" class="rounded-xl shadow-2xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Integrations Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Popular Integrations</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Connect with leading platforms in seconds</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-shop"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Shopify</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Send order confirmations, shipping updates, and abandoned cart reminders automatically.
+            </p>
+            <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 flex items-center">
+              Learn More <i class="bi bi-arrow-right ml-2"></i>
+            </a>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-person-workspace"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Salesforce</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Sync contacts, trigger SMS from workflows, and log all communication in your CRM.
+            </p>
+            <a href="#" class="text-cyan-600 font-semibold hover:text-cyan-700 flex items-center">
+              Learn More <i class="bi bi-arrow-right ml-2"></i>
+            </a>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-clipboard-data"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">HubSpot</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Automate marketing campaigns, nurture leads, and track engagement seamlessly.
+            </p>
+            <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 flex items-center">
+              Learn More <i class="bi bi-arrow-right ml-2"></i>
+            </a>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-sky-500 to-sky-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-wordpress"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">WordPress</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Add SMS notifications, form submissions, and user registration alerts to your site.
+            </p>
+            <a href="#" class="text-sky-600 font-semibold hover:text-sky-700 flex items-center">
+              Learn More <i class="bi bi-arrow-right ml-2"></i>
+            </a>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-lightning"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Zapier</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Connect with 5000+ apps and create custom automation workflows without coding.
+            </p>
+            <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 flex items-center">
+              Learn More <i class="bi bi-arrow-right ml-2"></i>
+            </a>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-cyan-600 to-blue-700 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-slack"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Slack</h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Receive alerts, send messages from channels, and manage conversations from Slack.
+            </p>
+            <a href="#" class="text-cyan-600 font-semibold hover:text-cyan-700 flex items-center">
+              Learn More <i class="bi bi-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integration Categories Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Integration Categories</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Find integrations for every business function</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-gradient-to-b from-blue-50 to-white p-6 rounded-xl shadow-lg text-center">
+            <div class="w-14 h-14 bg-blue-600 rounded-lg flex items-center justify-center text-white text-2xl mx-auto mb-4">
+              <i class="bi bi-cart3"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">E-commerce</h4>
+            <p class="text-gray-600 text-sm">Shopify, WooCommerce, Magento, BigCommerce</p>
+          </div>
+          <div class="bg-gradient-to-b from-cyan-50 to-white p-6 rounded-xl shadow-lg text-center">
+            <div class="w-14 h-14 bg-cyan-600 rounded-lg flex items-center justify-center text-white text-2xl mx-auto mb-4">
+              <i class="bi bi-people"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">CRM</h4>
+            <p class="text-gray-600 text-sm">Salesforce, HubSpot, Zoho, Pipedrive</p>
+          </div>
+          <div class="bg-gradient-to-b from-sky-50 to-white p-6 rounded-xl shadow-lg text-center">
+            <div class="w-14 h-14 bg-sky-600 rounded-lg flex items-center justify-center text-white text-2xl mx-auto mb-4">
+              <i class="bi bi-headset"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Support</h4>
+            <p class="text-gray-600 text-sm">Zendesk, Freshdesk, Intercom, Help Scout</p>
+          </div>
+          <div class="bg-gradient-to-b from-blue-50 to-white p-6 rounded-xl shadow-lg text-center">
+            <div class="w-14 h-14 bg-blue-700 rounded-lg flex items-center justify-center text-white text-2xl mx-auto mb-4">
+              <i class="bi bi-megaphone"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-900 mb-2">Marketing</h4>
+            <p class="text-gray-600 text-sm">Mailchimp, ActiveCampaign, SendGrid</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Integration Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Need a Custom Integration?</h2>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Our team can help you build custom integrations with any system or platform. We work with you to understand your workflow and create seamless connections that automate your processes.
+              </p>
+              <ul class="space-y-3 mb-8">
+                <li class="flex items-start">
+                  <i class="bi bi-check-circle-fill text-blue-600 text-xl mr-3 flex-shrink-0"></i>
+                  <span class="text-gray-600">Custom API development and webhooks</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-check-circle-fill text-blue-600 text-xl mr-3 flex-shrink-0"></i>
+                  <span class="text-gray-600">Legacy system integration support</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="bi bi-check-circle-fill text-blue-600 text-xl mr-3 flex-shrink-0"></i>
+                  <span class="text-gray-600">Dedicated integration engineer support</span>
+                </li>
+              </ul>
+              <a href="contact.html" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors inline-block">
+                Contact Integration Team
+              </a>
+            </div>
+            <div>
+              <img src="https://via.placeholder.com/500x400?text=Custom+Integration" alt="Custom Integration" class="rounded-xl shadow-lg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-blue-800">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Connect?</h2>
+              <p class="text-gray-200">Explore our integrations and start automating your communication workflows today.</p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-end">
+              <a href="contact.html" class="px-8 py-3 bg-white text-blue-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-center">Browse Integrations</a>
+              <a href="contact.html#demo" class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-900 transition-colors text-center">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

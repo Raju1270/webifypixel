@@ -22,15 +22,33 @@
       tailwind.config = {
         theme: {
           extend: {
+            colors: {
+              primary: "#0066FF",
+              secondary: "#00D4FF",
+            },
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              heading: ['Poppins', 'sans-serif'],
+              sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+              display: ['Poppins', 'system-ui', 'sans-serif'],
+            },
+            fontSize: {
+              xs: ['0.75rem', { lineHeight: '1.125rem' }],
+              sm: ['0.875rem', { lineHeight: '1.375rem' }],
+              base: ['0.9375rem', { lineHeight: '1.625rem' }],
+              lg: ['1.0625rem', { lineHeight: '1.75rem' }],
+              xl: ['1.125rem', { lineHeight: '1.875rem' }],
+              '2xl': ['1.375rem', { lineHeight: '2rem' }],
+              '3xl': ['1.75rem', { lineHeight: '2.25rem' }],
+              '4xl': ['2rem', { lineHeight: '2.5rem' }],
+              '5xl': ['2.5rem', { lineHeight: '1.15' }],
+              '6xl': ['3rem', { lineHeight: '1.1' }],
             },
             animation: {
               'float': 'float 6s ease-in-out infinite',
               'slide-up': 'slideUp 0.8s ease-out',
               'slide-left': 'slideLeft 0.8s ease-out',
-              'shimmer': 'shimmer 2s linear infinite',
+              'slide-right': 'slideRight 0.8s ease-out',
+              'scale-in': 'scaleIn 0.6s ease-out',
+              'fade-in': 'fadeIn 0.8s ease-out',
             },
             keyframes: {
               float: {
@@ -45,9 +63,17 @@
                 '0%': { transform: 'translateX(50px)', opacity: '0' },
                 '100%': { transform: 'translateX(0)', opacity: '1' },
               },
-              shimmer: {
-                '0%': { backgroundPosition: '-1000px 0' },
-                '100%': { backgroundPosition: '1000px 0' },
+              slideRight: {
+                '0%': { transform: 'translateX(-50px)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              scaleIn: {
+                '0%': { transform: 'scale(0.9)', opacity: '0' },
+                '100%': { transform: 'scale(1)', opacity: '1' },
+              },
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
               },
             },
           },
@@ -55,20 +81,47 @@
       };
     </script>
     <style>
+      [x-cloak] { display: none !important; }
+      
       * {
-        margin: 0;
-        padding: 0;
+        scroll-behavior: smooth;
       }
 
       body {
-        font-family: 'Inter', sans-serif;
-        overflow-x: hidden;
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 0.9375rem;
       }
 
       h1, h2, h3, h4, h5, h6 {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         font-weight: 800;
         letter-spacing: -0.025em;
+      }
+
+      .glass {
+        backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #3b82f6, #2563eb);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(180deg, #2563eb, #1d4ed8);
       }
 
       .animate-float {
@@ -107,12 +160,12 @@
                 <span>/</span>
                 <span class="text-gray-300">About Us</span>
               </div>
-              <p class="inline-block text-xs md:text-xs font-bold px-3 py-1 bg-purple-500/20 backdrop-blur-sm rounded-full text-purple-300 border border-purple-400/30 uppercase animate-fade-in">Our Story</p>
+              <p class="inline-block text-xs md:text-xs font-bold px-3 py-1 bg-purple-500/20 backdrop-blur-sm rounded-full text-purple-300 border border-purple-400/30 uppercase animate-fade-in">A Journey of Trust & Impact</p>
               <div class="text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 leading-[1.1] tracking-tight" style="animation-delay: 0.5s">
-                Empowering Businesses<br /><span class="bg-gradient-to-r from-purple-200 via-blue-300 to-purple-200 bg-clip-text text-transparent animate-shimmer delay-700 bg-[length:200%_100%]">Since 2003</span>
+                Connecting people with<br /><span class="bg-gradient-to-r from-purple-200 via-blue-300 to-purple-200 bg-clip-text text-transparent animate-shimmer delay-700 bg-[length:200%_100%]">Empowering Businesses</span>
               </div>
               <p class="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl font-light" style="animation-delay: 0.4s">
-                For over two decades, Pinnacle Teleservices has been at the forefront of communication technology, connecting businesses with their customers through innovative, reliable solutions.
+                From a humble beginning in 2003 to be the leader in messaging services, Pinnacle has surpassed several important milestones, thanks to the formidable team members and our steadfast clientele. With a focus on autonomous conversations across multiple channels, we strive to deliver 99.99% up-time & delivery across all our platforms and services.
               </p>
               <div class="grid grid-cols-3 gap-4 pt-4" style="animation-delay: 0.6s">
                 <div class="bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-all">
@@ -189,129 +242,300 @@
       </div>
     </section>
 
-    <!-- About Intro Section -->
+    <!-- Journey Section -->
     <section class="py-20 bg-white">
       <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">The Journey of Pinnacle</h2>
+        </div>
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Journey Since 2003</h2>
-            <p class="text-gray-600 leading-relaxed">
-              Pinnacle Teleservices has been a trusted communication partner for enterprises across industries since 2003. We started with a vision to bridge the gap between businesses and their customers through innovative, reliable, and scalable communication solutions.
-            </p>
-            <p class="text-gray-600 leading-relaxed">
-              Over the years, we have evolved from a small team to a leading player in the communication technology space, serving over 6000+ clients globally. Our commitment to excellence, innovation, and customer success has been the driving force behind our growth.
-            </p>
-            <p class="text-gray-600 leading-relaxed">
-              Today, Pinnacle is synonymous with cutting-edge communication solutions, empowering businesses to connect, engage, and grow.
+            <p class="text-gray-600 leading-relaxed text-lg">
+              Looking back at our story, the journey indeed has been of Pinnacle. With a 4 member team back in 2003, we have grown to a large family of 220+ team members, over 100 channel partners, and 6000+ clients. Consistent pursuit of high-quality of services along with a robust infrastructure, a quick turnaround on support and a drive for innovation all have equally contributed to our success and that of our clients.
             </p>
           </div>
           <div>
-            <img src="https://via.placeholder.com/600x400?text=Pinnacle+Office" alt="Pinnacle Office" class="rounded-xl shadow-2xl">
+            <img src="newassests/home/industry_man.png" alt="Pinnacle Team" class="rounded-xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">The Impact we have Created</h2>
+        </div>
+        <div class="max-w-4xl mx-auto">
+          <p class="text-gray-600 leading-relaxed text-lg text-center mb-8">
+            Reaching out to customers, on-time and every time form the crux of success for every business. Pinnacle has helped over 10,000 businesses in the last 2 decades to overcome the barriers of cost-effective and timely conversations with their consumers helping them with growth, brand recognition, trust and of course high ROI on their spending. From startups to large enterprises, we have been a reliable partner to one and all.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Offerings Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4">Core Offerings</h2>
+        </div>
+        <div class="max-w-5xl mx-auto">
+          <p class="text-gray-600 leading-relaxed text-lg mb-8">
+            Pinnacle is a pioneer in catering to the B2B and B2C segment with a wide array of service offerings. Our core offering majorly include, WhatsApp Business APIs, Google RCS, Business Messaging Services, AI/ML-NLP based ChatBots, Customized Intelligent IVR Services, Toll Free Solutions, Missed Call Applications, DTMF, 10 Digit Solutions, Audio Call Conferencing, Tele-voting, In-bound and Out-bound call solutions, Robust Email services, and high hybrid Digital marketing solutions. All these together are powered with the best in grade backbone infrastructure.
+          </p>
+          <p class="text-gray-600 leading-relaxed text-lg">
+            The company also offers Creative Engagement, Brand Activation, End to End Implementation, Real time Campaign Analysis and Database profiling when it comes to Integrated Marketing Initiatives. It also provides SMSC and USSD Services for the Telecom operator.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-award"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">The Experienced Player</h3>
+            <p class="text-gray-600 leading-relaxed">
+              With close to 2 decades of its existence, Pinnacle has practically experienced the evolution of not only messaging services but also the ever-changing requirements and use cases in marketing & communication. Not just the use cases and consumer behaviour is evolving, but the advent of technology is also taking phenomenal strides in the execution of messaging and bot-based conversations. We take pride in being part of this incredible change and take the driver's seat with our experience.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-people"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Young and Agile Team</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Pinnacle team is an agile group of 220+ young members with an average age of 30 years. The team always works to ensure that the clients get value for their money and services; it also helps customers to create engagement with their existing and prospective stakeholders to drive business growth. Adding to all these, every time when the company performs a task, it tries to leave a "WOW" experience.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Vision & Mission Section -->
-    <section class="py-20 bg-gradient-to-b from-gray-50 to-white" id="vision">
+    <section class="py-20 bg-white" id="vision">
       <div class="container mx-auto px-6 max-w-7xl">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Vision & Mission</h2>
+          <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-2">Our Vision</h2>
+          <p class="text-lg font-bold text-blue-600 mb-8">DARE. DREAM. DELIVER</p>
         </div>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
             <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
-              <i class="bi bi-eye"></i>
+              <i class="bi bi-lightning"></i>
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Dare</h3>
             <p class="text-gray-600 leading-relaxed">
-              To be the most trusted and innovative communication partner for enterprises worldwide, enabling seamless and meaningful interactions between businesses and their customers.
+              To be the best business partner at all times.
             </p>
           </div>
-          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
             <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
-              <i class="bi bi-bullseye"></i>
+              <i class="bi bi-star"></i>
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Dream</h3>
             <p class="text-gray-600 leading-relaxed">
-              We strive to deliver best-in-class communication solutions that are reliable, scalable, and secure. Our mission is to empower businesses with the tools they need to succeed in a digital-first world.
+              To develop technology that connects people via the power of communication.
             </p>
           </div>
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-rocket-takeoff"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Deliver</h3>
+            <p class="text-gray-600 leading-relaxed">
+              To become the fastest telecommunication service provider in order to deliver maximum client satisfaction.
+            </p>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-b from-gray-50 to-white p-12 rounded-2xl shadow-lg">
+          <div class="text-center mb-8">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Our Mission</h2>
+          </div>
+          <p class="text-gray-600 leading-relaxed text-lg text-center max-w-4xl mx-auto">
+            Deliver high-quality products and services in a collaborative environment that supports and expands our ability to add value to our vendors and partners.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Leadership Team Section -->
-    <section class="py-20 bg-white" id="leadership">
+    <!-- What We Do Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-6 max-w-7xl">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">What we do</h2>
+        </div>
+        <div class="max-w-5xl mx-auto">
+          <p class="text-gray-600 leading-relaxed text-lg">
+            We provide a conversational marketing platform powered with the best in industry and highly dependable infrastructure that enables B2B and B2C organizations, e-commerce sellers, and agencies to establish customer relationships by implementing end-to-end marketing campaigns, transactional messaging, and marketing automation. All of our products and services are developed in-house, which satisfies worldwide standards and results in a much-needed edge in terms of services and achieving delivery commitments. We always work to ensure that the existing and prospective stakeholders drive business growth and get value for their money and services.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Office Locations Section -->
+    <section class="py-20 bg-white" id="offices">
       <div class="container mx-auto px-6 max-w-7xl">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Leadership</h2>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-4">Our Office Locations</h2>
+          <p class="text-gray-600 text-lg">We are present across major cities in India</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-            <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-6">
-              <i class="bi bi-person"></i>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Head Office Nagpur -->
+          <div class="bg-gradient-to-b from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 border-2 border-blue-500">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-building"></i>
             </div>
-            <h4 class="text-xl font-bold text-gray-900 text-center mb-2">John Doe</h4>
-            <p class="text-blue-600 font-semibold text-center mb-4">Founder & CEO</p>
-            <p class="text-gray-600 text-center mb-6">John leads Pinnacle with a vision for innovation and customer success, driving the company's strategic growth.</p>
-            <div class="flex justify-center space-x-4">
-              <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
-                <i class="bi bi-linkedin"></i>
-              </a>
-              <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
-                <i class="bi bi-twitter-x"></i>
-              </a>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Nagpur (Head Office)</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              7, Pinnacle House, Nawab Layout, Tilak Nagar, Near Law College Square, Nagpur - 440010, INDIA
+            </p>
+            <div class="space-y-2">
+              <p class="text-sm text-gray-700"><i class="bi bi-telephone text-blue-600"></i> +91 7798 353535</p>
+              <p class="text-sm text-gray-700"><i class="bi bi-envelope text-blue-600"></i> sales@pinnacle.in</p>
             </div>
           </div>
+
+          <!-- Nagpur 2nd Office -->
           <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-            <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-6">
-              <i class="bi bi-person"></i>
+            <div class="w-16 h-16 bg-gradient-to-br from-gray-500 to-gray-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-geo-alt"></i>
             </div>
-            <h4 class="text-xl font-bold text-gray-900 text-center mb-2">Jane Smith</h4>
-            <p class="text-purple-600 font-semibold text-center mb-4">CTO</p>
-            <p class="text-gray-600 text-center mb-6">Jane oversees technology and product development, ensuring Pinnacle stays ahead in the communication tech space.</p>
-            <div class="flex justify-center space-x-4">
-              <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white transition-colors">
-                <i class="bi bi-linkedin"></i>
-              </a>
-              <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white transition-colors">
-                <i class="bi bi-twitter-x"></i>
-              </a>
-            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Nagpur (2nd Office)</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              Software Technology Parks of India Plot No. 3, First Floor, IT Park, Subhash Nagar, Nagpur - 440022
+            </p>
           </div>
+
+          <!-- Mumbai -->
           <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
-            <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center text-white text-4xl mx-auto mb-6">
-              <i class="bi bi-person"></i>
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-geo-alt"></i>
             </div>
-            <h4 class="text-xl font-bold text-gray-900 text-center mb-2">Alex Johnson</h4>
-            <p class="text-green-600 font-semibold text-center mb-4">COO</p>
-            <p class="text-gray-600 text-center mb-6">Alex manages operations and customer success, ensuring smooth delivery and support for all clients.</p>
-            <div class="flex justify-center space-x-4">
-              <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors">
-                <i class="bi bi-linkedin"></i>
-              </a>
-              <a href="#" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-green-600 hover:text-white transition-colors">
-                <i class="bi bi-twitter-x"></i>
-              </a>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Mumbai</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              Office No 418, Lodha Supremus, Off Mahakali Caves Rd, Next To Hotel Bindra Supremacy, Andheri East, Mumbai - 400093
+            </p>
+          </div>
+
+          <!-- Pune -->
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-geo-alt"></i>
             </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Pune</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              Olympia Building, Office No. 703, 704, 705, Near Audi Showroom, NH4, Baner, Pune - 411045
+            </p>
+          </div>
+
+          <!-- Gurgaon -->
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Gurgaon</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              404 Sector 48 IRIS Tech Park Sohna road Gurgaon - 122018
+            </p>
+          </div>
+
+          <!-- Ahmedabad -->
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Ahmedabad</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              401 - Shangrila Arcade, Shyamal Cross Road, Satellite, Ahmedabad - 380015
+            </p>
+          </div>
+
+          <!-- Bengaluru -->
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Bengaluru</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              NASSCOM COE IoT, KEONICS-2nd Floor, #29/A (E), 27th Main, 7th Cross Rd, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102
+            </p>
+          </div>
+
+          <!-- Chennai -->
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Chennai</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              RR Tower IV, Super A16 A17, 7th Floor Thiru ViKa Industrial Estate, Guindy, Chennai-600032
+            </p>
+          </div>
+
+          <!-- Mohali -->
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Mohali</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              Ground Floor, Sebiz Square, IT -C6, Sector 67, Mohali - 160062, Punjab
+            </p>
+          </div>
+
+          <!-- Hyderabad -->
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Hyderabad</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              Plot No.682, Babukhan Rasheed Plaza, Road #36, Jubilee Hills, Hyderabad 500033
+            </p>
+          </div>
+
+          <!-- Cochin -->
+          <div class="bg-gradient-to-b from-gray-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all hover:-translate-y-2">
+            <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center text-white text-2xl mb-6">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Cochin</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              #302, 3rd Floor, UB Business Center Thrikkakkara, Cochin, Kerala - 682 021
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-blue-900 to-blue-800">
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-blue-800" id="cta">
       <div class="container mx-auto px-6 max-w-7xl">
-        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Partner with Us?</h2>
-              <p class="text-gray-200">Join thousands of businesses that trust Pinnacle for their communication needs.</p>
+        <div class="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-10 md:p-14 border border-white/20 shadow-2xl">
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div class="lg:w-2/3">
+              <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-5 leading-tight">Ready to Partner with Us?</h2>
+              <p class="text-base md:text-lg text-gray-100/90 leading-relaxed">Join thousands of businesses that trust Pinnacle for their communication needs. Contact us to learn more about the best communication solution for your business.</p>
             </div>
-            <div class="flex flex-col sm:flex-row gap-4 justify-end">
-              <a href="contact.html" class="px-8 py-3 bg-white text-blue-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors text-center">Contact Us</a>
-              <a href="contact.html#demo" class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-900 transition-colors text-center">Get Started</a>
+            <div class="lg:w-1/3 flex flex-col gap-4 w-full lg:items-end">
+              <a
+                href="contact.html"
+                class="group inline-block w-full lg:w-auto text-center px-8 py-4 bg-white text-blue-900 font-bold rounded-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900 transition-all shadow-xl hover:shadow-2xl hover:scale-105 text-sm"
+                ><span class="group-hover:scale-105 inline-block transition-transform">Connect with us</span></a
+              >
+              <a
+                href="tel:+917798353535"
+                class="group inline-block w-full lg:w-auto text-center px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-blue-900 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-900 transition-all hover:scale-105 text-sm"
+                ><span class="group-hover:scale-105 inline-block transition-transform"><i class="bi bi-telephone"></i> +91 7798 353535</span></a
+              >
             </div>
           </div>
         </div>

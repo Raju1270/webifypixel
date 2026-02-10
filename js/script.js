@@ -70,7 +70,7 @@ function loadNavbar() {
     </div>
 
     <!-- Navigation -->
-    <nav class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100 animate-fade-in" id="mainNavbar" x-data="{ mobileMenuOpen: false, productsOpen: false, aboutOpen: false }">
+    <nav class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100 animate-fade-in" id="mainNavbar" x-data="{ mobileMenuOpen: false, productsOpen: false, servicesOpen: false, aboutOpen: false }">
       <div class="container mx-auto px-6 max-w-7xl">
         <div class="flex items-center justify-between py-3">
           <a class="flex items-center space-x-2.5 group" href="index.html" data-testid="link-home">
@@ -108,9 +108,7 @@ function loadNavbar() {
                     <div class="space-y-4">
                       <div>
                         <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="messaging.html">
-                          <svg class="w-5 h-5 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M4 4h16v12H5.17L4 17.17V4z"></path>
-                          </svg>
+                          <i class="bi bi-chat-left-text text-xl mt-1 flex-shrink-0"></i>
                           <div>
                             <div class="font-semibold">Messaging</div>
                             <p class="text-sm text-gray-600 mt-1 max-w-xs">Deliver transactional, OTP, and promotional messages securely and on time.</p>
@@ -119,9 +117,7 @@ function loadNavbar() {
                       </div>
                       <div>
                         <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="whatsapp-business-api.html">
-                          <svg class="w-5 h-5 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2a10 10 0 00-8.94 14.47L2 22l5.73-1.05A10 10 0 1012 2z"></path>
-                          </svg>
+                          <i class="bi bi-whatsapp text-xl mt-1 flex-shrink-0"></i>
                           <div>
                             <div class="font-semibold">WhatsApp Business API</div>
                             <p class="text-sm text-gray-600 mt-1 max-w-xs">Reach 2B+ users with fast, encrypted, AI-enabled WhatsApp messaging.</p>
@@ -130,9 +126,7 @@ function loadNavbar() {
                       </div>
                       <div>
                         <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="rcs.html">
-                          <svg class="w-5 h-5 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M3 5h18v10H7l-4 4V5z"></path>
-                          </svg>
+                          <i class="bi bi-chat-square-dots text-xl mt-1 flex-shrink-0"></i>
                           <div>
                             <div class="font-semibold">RCS</div>
                             <p class="text-sm text-gray-600 mt-1 max-w-xs">Rich interactive messaging with media, branding, and actions.</p>
@@ -143,9 +137,7 @@ function loadNavbar() {
                     <div class="space-y-4">
                       <div>
                         <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="voice.html">
-                          <svg class="w-5 h-5 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M6.62 10.79a15.91 15.91 0 006.59 6.59l2.2-2.2"></path>
-                          </svg>
+                          <i class="bi bi-telephone text-xl mt-1 flex-shrink-0"></i>
                           <div>
                             <div class="font-semibold">Voice</div>
                             <p class="text-sm text-gray-600 mt-1 max-w-xs">Automated and bulk voice calling solutions for enterprises.</p>
@@ -154,9 +146,7 @@ function loadNavbar() {
                       </div>
                       <div>
                         <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="email.html">
-                          <svg class="w-5 h-5 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M4 4h16v16H4z"></path>
-                          </svg>
+                          <i class="bi bi-envelope text-xl mt-1 flex-shrink-0"></i>
                           <div>
                             <div class="font-semibold">Email</div>
                             <p class="text-sm text-gray-600 mt-1 max-w-xs">Reliable bulk and transactional email delivery platform.</p>
@@ -165,12 +155,81 @@ function loadNavbar() {
                       </div>
                       <div>
                         <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="pinbot.html">
-                          <svg class="w-5 h-5 mt-1 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2a10 10 0 100 20"></path>
-                          </svg>
+                          <i class="bi bi-robot text-xl mt-1 flex-shrink-0"></i>
                           <div>
                             <div class="font-semibold">PinBot</div>
                             <p class="text-sm text-gray-600 mt-1 max-w-xs">AI-powered chatbot for customer engagement and automation.</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+                <button class="px-3 py-2 text-sm text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center rounded-lg hover:bg-blue-50" @click="open = !open">
+                  Services
+                  <svg class="w-3.5 h-3.5 ml-1 transform transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="absolute left-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 min-w-max z-50" style="display: none">
+                  <div class="h-1 bg-blue-600 rounded-t-lg"></div>
+                  <div class="flex p-6 space-x-8">
+                    <div class="space-y-4">
+                      <div>
+                        <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="e-commerce.html">
+                          <i class="bi bi-cart text-xl mt-1 flex-shrink-0"></i>
+                          <div>
+                            <div class="font-semibold">E-Commerce Solutions</div>
+                            <p class="text-sm text-gray-600 mt-1 max-w-xs">Complete online store solutions with payment integration and management.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div>
+                        <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="integrations.html">
+                          <i class="bi bi-bezier2 text-xl mt-1 flex-shrink-0"></i>
+                          <div>
+                            <div class="font-semibold">API Integration</div>
+                            <p class="text-sm text-gray-600 mt-1 max-w-xs">Seamless integration with third-party services and platforms.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div>
+                        <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="developers.html">
+                          <i class="bi bi-code-square text-xl mt-1 flex-shrink-0"></i>
+                          <div>
+                            <div class="font-semibold">Developer Support</div>
+                            <p class="text-sm text-gray-600 mt-1 max-w-xs">Expert technical support and documentation for developers.</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="space-y-4">
+                      <div>
+                        <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="contact.html">
+                          <i class="bi bi-briefcase text-xl mt-1 flex-shrink-0"></i>
+                          <div>
+                            <div class="font-semibold">Consulting Services</div>
+                            <p class="text-sm text-gray-600 mt-1 max-w-xs">Strategic guidance and consulting for your business needs.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div>
+                        <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="contact.html">
+                          <i class="bi bi-laptop text-xl mt-1 flex-shrink-0"></i>
+                          <div>
+                            <div class="font-semibold">Custom Development</div>
+                            <p class="text-sm text-gray-600 mt-1 max-w-xs">Tailored software solutions built to your specifications.</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div>
+                        <a class="flex items-start space-x-3 text-gray-900 hover:text-blue-600 transition-colors" href="contact.html">
+                          <i class="bi bi-cloud text-xl mt-1 flex-shrink-0"></i>
+                          <div>
+                            <div class="font-semibold">Cloud Solutions</div>
+                            <p class="text-sm text-gray-600 mt-1 max-w-xs">Scalable cloud infrastructure and migration services.</p>
                           </div>
                         </a>
                       </div>
@@ -243,6 +302,22 @@ function loadNavbar() {
                     <a @click="mobileMenuOpen = false" class="block py-2 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" href="voice.html">Voice</a>
                     <a @click="mobileMenuOpen = false" class="block py-2 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" href="email.html">Email</a>
                     <a @click="mobileMenuOpen = false" class="block py-2 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" href="pinbot.html">PinBot</a>
+                  </div>
+                </li>
+                <li>
+                  <button @click="servicesOpen = !servicesOpen" class="w-full text-left py-3 px-4 text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium rounded-lg transition-colors flex justify-between items-center">
+                    <span><i class="bi bi-gear mr-2"></i>Services</span>
+                    <svg class="w-4 h-4 transform transition-transform" :class="{ 'rotate-180': servicesOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+                  <div x-show="servicesOpen" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" class="pl-8 space-y-1 mt-1">
+                    <a @click="mobileMenuOpen = false" class="block py-2 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" href="e-commerce.html">E-Commerce Solutions</a>
+                    <a @click="mobileMenuOpen = false" class="block py-2 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" href="integrations.html">API Integration</a>
+                    <a @click="mobileMenuOpen = false" class="block py-2 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" href="developers.html">Developer Support</a>
+                    <a @click="mobileMenuOpen = false" class="block py-2 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" href="contact.html">Consulting Services</a>
+                    <a @click="mobileMenuOpen = false" class="block py-2 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" href="contact.html">Custom Development</a>
+                    <a @click="mobileMenuOpen = false" class="block py-2 px-4 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors" href="contact.html">Cloud Solutions</a>
                   </div>
                 </li>
                 <li>

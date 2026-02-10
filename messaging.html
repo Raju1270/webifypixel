@@ -127,16 +127,25 @@
     <div id="navbar-placeholder"></div>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 min-h-screen flex items-center overflow-hidden">
-      <!-- Animated Background Orbs -->
-      <div class="absolute inset-0 overflow-hidden opacity-30">
-        <div class="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-float"></div>
-        <div class="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 2s"></div>
-        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-96 h-96 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-float" style="animation-delay: 4s"></div>
+    <section class="relative bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900 min-h-screen flex items-center overflow-hidden">
+      <!-- Zigzag Pattern -->
+      <div class="absolute inset-0 overflow-hidden opacity-10">
+        <svg class="absolute w-full h-full" viewBox="0 0 1200 800" preserveAspectRatio="none">
+          <path d="M0,400 L300,200 L600,400 L900,200 L1200,400 L1200,800 L0,800 Z" fill="url(#zigzag-gradient)" />
+          <defs>
+            <linearGradient id="zigzag-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.5" />
+              <stop offset="50%" style="stop-color:#14b8a6;stop-opacity:0.3" />
+              <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.5" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
-
-      <!-- Gradient Overlay -->
-      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40"></div>
+      <!-- Animated Lines -->
+      <div class="absolute inset-0 overflow-hidden opacity-20">
+        <div class="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-cyan-400 to-transparent animate-float"></div>
+        <div class="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-teal-400 to-transparent animate-float" style="animation-delay: 1s"></div>
+      </div>
 
       <div class="container mx-auto px-6 max-w-7xl relative z-10">
         <div class="flex flex-col lg:flex-row items-center justify-between min-h-screen py-16 gap-12">
